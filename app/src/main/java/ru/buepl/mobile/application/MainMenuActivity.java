@@ -1,6 +1,7 @@
 package ru.buepl.mobile.application;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -50,10 +51,9 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
 
                 break;
             case R.id.b_mainWeb:
-                /* -- is this needed, to open up in chrome/safari?
-                Intent mainWebIntent  = new Intent(this, ApplicationActivity.class);
-                startActivity(applicationIntent);
-                 */
+
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://buepl.ru/"));
+                startActivity(webIntent);
                 break;
 
             case R.id.b_gallery:
