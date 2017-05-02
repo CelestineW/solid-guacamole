@@ -16,8 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProgramChoiceActivity"></activity>
-
+        <activity android:name=".ProgramChoiceActivity" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".CreateAccountActivity"></activity>
     </application>
 
 </manifest>
