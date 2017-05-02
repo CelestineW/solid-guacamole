@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ProgramChoiceActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button programButton, appButton, webButton, galleryButton;
 

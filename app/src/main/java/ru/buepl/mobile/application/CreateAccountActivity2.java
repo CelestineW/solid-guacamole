@@ -6,33 +6,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
+public class CreateAccountActivity2 extends AppCompatActivity implements View.OnClickListener {
 
-    Button signIn;
+    Button submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_create_account2);
 
-        signIn = (Button) findViewById(R.id.button4);
-        signIn.setOnClickListener(this);
+        submitButton = (Button) findViewById(R.id.button5);
+        submitButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()){
+        switch(v.getId()){
 
-            case R.id.button4:
+            case R.id.button5:
 
                 Intent programChoice = new Intent(this, MainMenuActivity.class);
                 startActivity(programChoice);
 
                 break;
 
-
         }
-
     }
 }
