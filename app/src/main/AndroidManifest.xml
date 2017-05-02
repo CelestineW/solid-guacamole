@@ -19,7 +19,9 @@
         <activity android:name=".MainMenuActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".CreateAccountActivity" />
-        <activity android:name=".CreateAccountActivity2"></activity>
+        <activity android:name=".CreateAccountActivity2" />
+        <activity android:name=".ApplicationActivity1" />
+        <activity android:name=".ProgramSelectionActivity"></activity>
     </application>
 
 </manifest>

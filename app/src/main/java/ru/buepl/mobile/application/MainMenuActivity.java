@@ -14,7 +14,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_program_choice);
+        setContentView(R.layout.activity_main_menu);
 
         programButton = (Button) findViewById(R.id.b_academicProgs);
         appButton = (Button) findViewById(R.id.b_app);
@@ -44,12 +44,11 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.b_app:
 
-                /*
-                Intent applicationIntent = new Intent(this, ApplicationActivity.class);
-                startActivity(applicationIntent);
-                 */
+                Intent programChoiceIntent = new Intent(this, ProgramSelectionActivity.class);
+                startActivity(programChoiceIntent);
 
                 break;
+
             case R.id.b_mainWeb:
 
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://buepl.ru/"));
