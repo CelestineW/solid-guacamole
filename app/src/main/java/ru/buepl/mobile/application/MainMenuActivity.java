@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import ru.buepl.mobile.application.data.shared.PersonalInfo;
+
 public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button programButton, appButton, webButton, galleryButton;
@@ -44,8 +46,8 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.b_app:
 
-                Intent programChoiceIntent = new Intent(this, ProgramSelectionActivity.class);
-                startActivity(programChoiceIntent);
+                Intent infoIntent = new Intent(this, PersonalInfoActivity.class);
+                startActivity(infoIntent);
 
                 break;
 

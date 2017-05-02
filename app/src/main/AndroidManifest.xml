@@ -21,7 +21,9 @@
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".CreateAccountActivity2" />
         <activity android:name=".ApplicationActivity1" />
-        <activity android:name=".ProgramSelectionActivity"></activity>
+        <activity android:name=".ProgramSelectionActivity" />
+        <activity android:name=".IdentificationActivity" />
+        <activity android:name=".PersonalInfoActivity"></activity>
     </application>
 
 </manifest>
