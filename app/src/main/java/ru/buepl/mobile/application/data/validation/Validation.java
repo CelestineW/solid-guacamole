@@ -35,6 +35,29 @@ public final class Validation {
         return res;
     }
 
+    public static List<ValidationError> mapErrorsForSection(@NonNull Validatable validatable,
+                                                            int sectionStringResourceId,
+                                                            @NonNull Context context) {
+        return mapErrorsForSection(validatable.validate(context), sectionStringResourceId, context);
+    }
+
+    public static List<ValidationError> mapErrorsForSection(@NonNull List<ValidationError> validationErrors,
+                                                            int sectionStringResourceId,
+                                                            @NonNull Context context) {
+        List<ValidationError> res = new ArrayList<>();
+        Resources resources = context.getResources();
+        String separator = resources.getString(R.string.validation_separator);
+
+        for (ValidationError error: validationErrors) {
+            String message = resources.getString(R.string.incomplete_section)
+                    + resources.getString(sectionStringResourceId)
+                    + separator
+                    + error.getMessage();
+            res.add(new ValidationError(message));
+        }
+        return res;
+    }
+
     /**
      * Validates the specified {@link Validatable} objects, and
      * returns a list containing all {@link ValidationError errors}
@@ -58,6 +81,27 @@ public final class Validation {
     }
 
     /**
+     * Validates that an object is not {@code null}.
+     *
+     * @param obj                the object to validate
+     * @param stringResourceId the ID of {@link R.string string resource} naming the field
+     *                         which is being validated
+     * @param context          the {@link Context} with which to perform the validation
+     *                         (needed to lookup string resources)
+     * @return a list containing a {@link ValidationError} if the object is null;
+     * an empty list otherwise.
+     */
+    public static List<ValidationError> nonNull(@Nullable Object obj,
+                                                int stringResourceId,
+                                                @NonNull Context context) {
+        if (obj == null) {
+            return missingField(stringResourceId, context);
+        } else {
+            return Collections.emptyList();
+        }
+    }
+
+    /**
      * Validates that a string is not {@code null} or empty.
      *
      * @param toValidate       the string to validate.
@@ -72,7 +116,7 @@ public final class Validation {
                                                        int stringResourceId,
                                                        @NonNull Context context) {
         if (emptyOrNull(toValidate)) {
-            return missingString(stringResourceId, context);
+            return missingField(stringResourceId, context);
         } else {
             return Collections.emptyList();
         }
@@ -95,9 +139,9 @@ public final class Validation {
                                                                int stringResourceId,
                                                                @NonNull Context context) {
         if (emptyOrNull(toValidate)) {
-            return missingString(stringResourceId, context);
+            return missingField(stringResourceId, context);
         } else if (!pattern.matcher(toValidate).matches()) {
-            return invalidString(stringResourceId, context);
+            return invalidField(stringResourceId, context);
         } else {
             return Collections.emptyList();
         }
@@ -120,7 +164,7 @@ public final class Validation {
                                                                int stringResourceId,
                                                                @NonNull Context context) {
         if (!emptyOrNull(toValidate) && !pattern.matcher(toValidate).matches()) {
-            return invalidString(stringResourceId, context);
+            return invalidField(stringResourceId, context);
         } else {
             return Collections.emptyList();
         }
@@ -130,13 +174,13 @@ public final class Validation {
         return s == null || s.isEmpty();
     }
 
-    private static List<ValidationError> missingString(int stringResourceId, Context context) {
+    private static List<ValidationError> missingField(int stringResourceId, Context context) {
         Resources resources = context.getResources();
         String message = resources.getString(R.string.missing_field) + resources.getString(stringResourceId);
         return Collections.singletonList(new ValidationError(message));
     }
 
-    private static List<ValidationError> invalidString(int stringResourceId, Context context) {
+    private static List<ValidationError> invalidField(int stringResourceId, Context context) {
         Resources resources = context.getResources();
         String message = resources.getString(R.string.invalid_field) + resources.getString(stringResourceId);
         return Collections.singletonList(new ValidationError(message));

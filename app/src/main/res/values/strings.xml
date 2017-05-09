@@ -3,18 +3,55 @@
 
     <!-- Form field names -->
     <string name="address">Address</string>
+    <string name="advance_placement">Advance Placement</string>
+    <string name="advance_placement_doc_1">Advance Placement Document 1</string>
+    <string name="advance_placement_doc_2">Advance Placement Document 2</string>
     <string name="apartment_number">Apt. No.</string>
     <string name="city">City</string>
+    <string name="contact_info">Contact Information</string>
     <string name="country">Country</string>
+    <string name="course_type">Course Type</string>
+    <string name="current_education_level">Current Education Level</string>
+    <string name="date">Date</string>
+    <string name="document_number">Document Number</string>
+    <string name="document_title">Document Title</string>
     <string name="email">Email</string>
+    <string name="exam_result">Exam Result</string>
+    <string name="exam_result_1">Exam Result 1</string>
+    <string name="exam_result_2">Exam Result 2</string>
+    <string name="exam_result_3">Exam Result 3</string>
+    <string name="exam_result_4">Exam Result 4</string>
+    <string name="exam_result_5">Exam Result 5</string>
+    <string name="exam_result_6">Exam Result 6</string>
+    <string name="father_info">Father\'s Information</string>
     <string name="first_name">First Name</string>
+    <string name="foreign_language">Foreign Language</string>
     <string name="full_name">Full Name</string>
+    <string name="issue_date">Issue Date</string>
+    <string name="issued_by">Issued By</string>
+    <string name="job_title">Job Title</string>
     <string name="last_name">Last Name</string>
+    <string name="location">Location</string>
+    <string name="mother_info">Mother\'s Information</string>
     <string name="phone_number">Phone Number</string>
+    <string name="program_choice">Program Choice</string>
+    <string name="program_choice_1">Program Choice 1</string>
+    <string name="program_choice_2">Program Choice 2</string>
+    <string name="program_choice_3">Program Choice 3</string>
+    <string name="qualification">Qualification</string>
+    <string name="registration_number">Registration Number</string>
+    <string name="score">Score</string>
+    <string name="specialization">Specialization</string>
     <string name="street_address">Street Address</string>
+    <string name="subject">Subject</string>
+    <string name="supporting_documentation">Supporting Documentation</string>
+    <string name="supporting_documentation_type">Supporting Documentation Type</string>
+    <string name="year_number">Year Number</string>
     <string name="zip_code">Zip Code</string>
 
     <!-- Validation messages -->
     <string name="missing_field">Missing field: </string>
+    <string name="incomplete_section">Incomplete section: </string>
     <string name="invalid_field">Invalid field: </string>
+    <string name="validation_separator"> -> </string>
 </resources>
