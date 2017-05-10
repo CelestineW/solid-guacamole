@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/personal_info"
+            android:title="PERSONAL INFORMATION" />
+        <item
+            android:id="@+id/application_type"
+            android:title="Application Type" />
+        <item
+            android:id="@+id/identification"
+            android:title="Identification" />
+        <item
+            android:id="@+id/academic_info"
+            android:title="Academic Information" />
+        <item
+            android:id="@+id/transcript"
+            android:title="Transcript" />
+        <item
+            android:id="@+id/academic_placement"
+            android:title="Academic Placement" />
+        <item
+            android:id="@+id/military_service"
+            android:title="Military Services" />
+        <item
+            android:id="@+id/st_petersburg_address"
+            android:title="St. Petersburg Address" />
+        <item
+            android:id="@+id/nat_acceptance_test"
+            android:title="National Acceptance Test" />
+        <item
+            android:id="@+id/univ_entrance_exams"
+            android:title="University Entrance Exams" />
+        <item
+            android:id="@+id/parent_info"
+            android:title="Parent Information" />
+        <item
+            android:id="@+id/special_req"
+            android:title="Special Requirement" />
+        <item
+            android:id="@+id/indiv_accomplishments"
+            android:title="Individual Accomplishments" />
+        <item
+            android:id="@+id/return_address"
+            android:title="Return Address" />
+        <item
+            android:id="@+id/certifications"
+            android:title="Certifications" />
+        <item
+            android:id="@+id/applicant_signature"
+            android:title="Applicant Signature" />
+    </group>
+
+
+
+</menu>
