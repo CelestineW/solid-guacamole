@@ -2,18 +2,15 @@ package ru.buepl.mobile.application.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public final class Application {
     private Type type;
     private HigherEducationApplication higherEducationApplication;
     private ProfessionalDevelopmentApplication professionalDevelopmentApplication;
-
-    /**
-     * For serialization purposes
-     */
-    private Application() {}
 
     public static Application forHigherEducation(HigherEducationApplication application) {
         return new Application(Type.HIGHER_EDUCATION, application, null);
