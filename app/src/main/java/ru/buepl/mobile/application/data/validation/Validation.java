@@ -35,12 +35,35 @@ public final class Validation {
         return res;
     }
 
+    /**
+     * Map {@link ValidationError errors} from a section to have a prefix describing
+     * the section in which the occurred.
+     *
+     * @param validatable             members of the section to validate
+     * @param sectionStringResourceId the ID of {@link R.string string resource} naming
+     *                                the section which is being validated
+     * @param context                 the {@link Context} with which to perform the validation
+     *                                (needed to lookup string resources)
+     * @return a list containing the validation errors for the section
+     */
     public static List<ValidationError> mapErrorsForSection(@NonNull Validatable validatable,
                                                             int sectionStringResourceId,
                                                             @NonNull Context context) {
         return mapErrorsForSection(validatable.validate(context), sectionStringResourceId, context);
     }
 
+    /**
+     * Map {@link ValidationError errors} from a section to have a prefix describing
+     * the section in which the occurred.
+     *
+     * @param validationErrors        errors encountered when validating fields in the
+     *                                section
+     * @param sectionStringResourceId the ID of {@link R.string string resource} naming
+     *                                the section which is being validated
+     * @param context                 the {@link Context} with which to perform the validation
+     *                                (needed to lookup string resources)
+     * @return a list containing the validation errors for the section
+     */
     public static List<ValidationError> mapErrorsForSection(@NonNull List<ValidationError> validationErrors,
                                                             int sectionStringResourceId,
                                                             @NonNull Context context) {
@@ -51,7 +74,7 @@ public final class Validation {
         for (ValidationError error: validationErrors) {
             String message = resources.getString(R.string.incomplete_section)
                     + resources.getString(sectionStringResourceId)
-                    + separator
+                    + " " + separator + " "
                     + error.getMessage();
             res.add(new ValidationError(message));
         }
@@ -98,6 +121,24 @@ public final class Validation {
             return missingField(stringResourceId, context);
         } else {
             return Collections.emptyList();
+        }
+    }
+
+    /**
+     * Validates a {@link Validatable validatable} object, but only
+     * if it is not null.
+     *
+     * @param validatable the possibly-null object to validate
+     * @param context     the {@link Context} with which to perform the validation
+     *                    (needed to lookup string resources)
+     * @return a list containing errors encountered during validation
+     */
+    public static List<ValidationError> nullOrValid(@Nullable Validatable validatable,
+                                                    @NonNull Context context) {
+        if (validatable == null) {
+            return Collections.emptyList();
+        } else {
+            return validatable.validate(context);
         }
     }
 
