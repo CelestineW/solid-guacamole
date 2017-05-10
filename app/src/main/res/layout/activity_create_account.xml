@@ -114,16 +114,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                    />
 
                 <EditText
                     android:id="@+id/editText18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                    />
 
                 <FrameLayout android:layout_width="wrap_content">
                     <EditText
@@ -132,8 +130,7 @@
                         android:layout_height="wrap_content"
                         android:ems="6"
                         android:inputType="textPersonName|number"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                     />
                 </FrameLayout>
             </TableRow>
 
@@ -180,8 +177,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                  />
 
                 <EditText
                     android:id="@+id/editText21"
@@ -189,8 +185,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                  />
             </TableRow>
 
             <TableRow android:paddingLeft="10dp">
@@ -226,8 +221,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                  />
 
             </TableRow>
 
@@ -254,8 +248,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                   />
 
 
             </TableRow>
@@ -284,8 +277,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPassword"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                 />
 
                 <EditText
                     android:id="@+id/editText6"
@@ -293,8 +285,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPassword"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                 />
 
             </TableRow>
 
