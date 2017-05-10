@@ -17,19 +17,16 @@
         <activity android:name=".ProgramSelectionActivity" />
         <activity android:name=".IdentificationActivity" />
         <activity android:name=".PersonalInfoActivity" />
+
         <activity
             android:name=".SplashScreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".ProfessionalDevelopmentActivity"
-            android:label="@string/title_activity_professional_development"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

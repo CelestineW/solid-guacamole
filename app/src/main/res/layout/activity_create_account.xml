@@ -1,336 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
     tools:context="ru.buepl.mobile.application.CreateAccountActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:text="To apply for BUEPL programs please create your personal account"
-        android:textColor="#750825" />
+        android:orientation="vertical"
+        >
 
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="25dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="To apply for BUEPL programs please create your personal account"
+            android:textColor="#750825" />
 
-        <TableRow
-            android:paddingLeft="25dp"
-            android:paddingTop="25dp">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="25dp"
+            android:shrinkColumns="*">
 
-            <EditText
-                android:id="@+id/editText16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp" />
-
-            <EditText
-                android:id="@+id/editText13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
-
-
-            <FrameLayout android:layout_width="wrap_content">
+            <TableRow
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
 
                 <EditText
-                    android:id="@+id/editText15"
+                    android:id="@+id/editText16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="2"
-                    android:inputType="textCapCharacters|textPersonName"
+                    android:inputType="textPersonName"
+                    android:paddingRight="25dp" />
+
+                <EditText
+                    android:id="@+id/editText13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
                     android:paddingLeft="25dp"
                     android:paddingRight="25dp" />
 
-            </FrameLayout>
+
+                <FrameLayout android:layout_width="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="2"
+                        android:inputType="textCapCharacters|textPersonName"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp" />
+
+                </FrameLayout>
 
 
+            </TableRow>
 
-        </TableRow>
-
-        <TableRow android:paddingLeft="25dp">
-
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText16"
-                android:layout_alignStart="@+id/editText16"
-                android:layout_below="@+id/editText16"
-
-                android:text="Last Name" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/editText13"
-                android:layout_alignStart="@id/editText13"
-                android:layout_below="@+id/editText13"
-
-                android:text="First Name" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText15"
-                android:layout_alignStart="@+id/editText15"
-                android:layout_below="@+id/editText15"
-
-                android:text="MI" />
+            <TableRow android:paddingLeft="10dp">
 
 
-        </TableRow>
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText16"
+                    android:layout_alignStart="@+id/editText16"
+                    android:layout_below="@+id/editText16"
+
+                    android:text="Last Name" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/editText13"
+                    android:layout_alignStart="@id/editText13"
+                    android:layout_below="@+id/editText13"
+
+                    android:text="First Name" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText15"
+                    android:layout_alignStart="@+id/editText15"
+                    android:layout_below="@+id/editText15"
+
+                    android:text="MI" />
 
 
-        <TableRow
-            android:paddingLeft="25dp"
-            android:paddingTop="25dp">
-
-            <EditText
-                android:id="@+id/editText17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
-
-            <EditText
-                android:id="@+id/editText18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
-
-            <EditText
-                android:id="@+id/editText19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName|number"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
-        </TableRow>
+            </TableRow>
 
 
-        <TableRow android:paddingLeft="25dp">
+            <TableRow
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:shrinkColumns="*">
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText17"
-                android:layout_alignStart="@+id/editText17"
-                android:layout_below="@+id/editText17"
-                android:text="Street Address" />
+                <EditText
+                    android:id="@+id/editText17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    />
 
+                <EditText
+                    android:id="@+id/editText18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    />
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText18"
-                android:layout_alignStart="@+id/editText18"
-                android:layout_below="@+id/editText18"
-                android:text="City" />
-
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText19"
-                android:layout_alignStart="@+id/editText19"
-                android:layout_below="@+id/editText19"
-                android:text="Zip Code" />
-        </TableRow>
-
-        <TableRow
-            android:paddingLeft="25dp"
-            android:paddingTop="25dp">
-
-            <EditText
-                android:id="@+id/editText20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
-
-            <EditText
-                android:id="@+id/editText21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
-        </TableRow>
-
-        <TableRow android:paddingLeft="25dp">
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText20"
-                android:layout_alignStart="@+id/editText20"
-                android:layout_below="@+id/editText20"
-                android:text="Country" />
+                <FrameLayout android:layout_width="wrap_content">
+                    <EditText
+                        android:id="@+id/editText19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="6"
+                        android:inputType="textPersonName|number"
+                     />
+                </FrameLayout>
+            </TableRow>
 
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText21"
-                android:layout_alignStart="@+id/editText21"
-                android:layout_below="@+id/editText21"
-                android:text="Phone Number" />
+            <TableRow android:paddingLeft="10dp">
 
-        </TableRow>
-
-        <TableRow
-            android:paddingLeft="25dp"
-            android:paddingTop="25dp">
-
-            <EditText
-                android:id="@+id/editText5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
-
-        </TableRow>
-
-        <TableRow android:paddingLeft="25dp">
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText5"
-                android:layout_alignStart="@+id/editText5"
-                android:layout_below="@+id/editText5"
-                android:text="Email" />
-
-        </TableRow>
-
-        <TableRow
-            android:paddingLeft="25dp"
-            android:paddingTop="25dp">
-
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText17"
+                    android:layout_alignStart="@+id/editText17"
+                    android:layout_below="@+id/editText17"
+                    android:text="Street Address" />
 
 
-        </TableRow>
-
-        <TableRow android:paddingLeft="25dp">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText3"
-                android:layout_alignStart="@+id/editText3"
-                android:layout_below="@+id/editText3"
-                android:text="Username" />
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText18"
+                    android:layout_alignStart="@+id/editText18"
+                    android:layout_below="@+id/editText18"
+                    android:text="City" />
 
 
-        </TableRow>
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText19"
+                    android:layout_alignStart="@+id/editText19"
+                    android:layout_below="@+id/editText19"
+                    android:text="Zip Code" />
+            </TableRow>
 
-        <TableRow
-            android:paddingLeft="25dp"
-            android:paddingTop="25dp">
+            <TableRow
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
 
-            <EditText
-                android:id="@+id/editText4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPassword"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
+                <EditText
+                    android:id="@+id/editText20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                  />
 
-            <EditText
-                android:id="@+id/editText6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPassword"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp" />
+                <EditText
+                    android:id="@+id/editText21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                  />
+            </TableRow>
 
-        </TableRow>
+            <TableRow android:paddingLeft="10dp">
 
-        <TableRow android:paddingLeft="25dp">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText4"
-                android:layout_alignStart="@+id/editText4"
-                android:layout_below="@+id/editText4"
-                android:text="Password" />
-
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText6"
-                android:layout_alignStart="@+id/editText6"
-                android:layout_below="@+id/editText6"
-                android:text="Re-type Password" />
-        </TableRow>
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText20"
+                    android:layout_alignStart="@+id/editText20"
+                    android:layout_below="@+id/editText20"
+                    android:text="Country" />
 
 
-    </TableLayout>
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText21"
+                    android:layout_alignStart="@+id/editText21"
+                    android:layout_below="@+id/editText21"
+                    android:text="Phone Number" />
+
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                  />
+
+            </TableRow>
+
+            <TableRow android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText5"
+                    android:layout_alignStart="@+id/editText5"
+                    android:layout_below="@+id/editText5"
+                    android:text="Email" />
+
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                   />
 
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView15"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:background="#750825"
-        android:padding="10dp"
-        android:text="Create Account"
-        android:textColor="@android:color/white" />
+            </TableRow>
+
+            <TableRow android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText3"
+                    android:layout_alignStart="@+id/editText3"
+                    android:layout_below="@+id/editText3"
+                    android:text="Username" />
 
 
-</LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                 />
+
+                <EditText
+                    android:id="@+id/editText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                 />
+
+            </TableRow>
+
+            <TableRow android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText4"
+                    android:layout_alignStart="@+id/editText4"
+                    android:layout_below="@+id/editText4"
+                    android:text="Password" />
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText6"
+                    android:layout_alignStart="@+id/editText6"
+                    android:layout_below="@+id/editText6"
+                    android:text="Re-type Password" />
+            </TableRow>
+
+
+        </TableLayout>
+
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView15"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:background="#750825"
+            android:padding="10dp"
+            android:text="Create Account"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+</ScrollView>
