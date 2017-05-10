@@ -1,13 +1,23 @@
 package ru.buepl.mobile.application;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+
+import ru.buepl.mobile.application.data.AccountInfo;
+import ru.buepl.mobile.application.data.Application;
+import ru.buepl.mobile.application.data.firebase.FirebaseHelper;
+import ru.buepl.mobile.application.data.firebase.UserDataUpdateListener;
+import ru.buepl.mobile.application.data.validation.Validation;
 
 public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -53,31 +63,62 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v) {
 
-        switch(v.getId()){
+        switch (v.getId()) {
 
             case R.id.button6:
 
-                String firstNameTxt = editTextFirstName.getText().toString();
-                String MITxt = editTextMI.getText().toString();
-                String lastNameTxt = editTextLastName.getText().toString();
-                String streetAddressTxt = editTextStreetAddress.getText().toString();
-                String cityTxt = editTextCity.getText().toString();
-                String zipCodeTxt = editTextZipCode.getText().toString();
-                String countryTxt = editTextCountry.getText().toString();
-                String phoneNumber = editTextPhoneNumber.getText().toString();
+                String firstNameTxt = editTextFirstName.getText().toString().trim();
+                String MITxt = editTextMI.getText().toString().trim();
+                String lastNameTxt = editTextLastName.getText().toString().trim();
+                String streetAddressTxt = editTextStreetAddress.getText().toString().trim();
+                String cityTxt = editTextCity.getText().toString().trim();
+                String zipCodeTxt = editTextZipCode.getText().toString().trim();
+                String countryTxt = editTextCountry.getText().toString().trim();
+                String phoneNumber = editTextPhoneNumber.getText().toString().trim();
 
-                String emailTxt = editTextEmail.getText().toString();
-                String usernameTxt = editTextUsername.getText().toString();
+                String emailTxt = editTextEmail.getText().toString().trim();
                 String passwordTxt = editTextPassword.getText().toString();
                 String retypePasswordTxt = editTextRetypePassword.getText().toString();
 
-                Intent mainMenuIntent = new Intent(this, MainMenuActivity.class);
-                startActivity(mainMenuIntent);
+                AccountInfo accountInfo = AccountInfo.builder()
+                        .firstName(firstNameTxt)
+                        .middleName(MITxt)
+                        .lastName(lastNameTxt)
+                        .address(streetAddressTxt)
+                        .city(cityTxt)
+                        .zipCode(zipCodeTxt)
+                        .country(countryTxt)
+                        .email(emailTxt)
+                        .phone(phoneNumber)
+                        .build();
 
+                if (Validation.validateAndToastFirstError(accountInfo, this)) {
+                    if (!passwordTxt.equals(retypePasswordTxt)) {
+                        Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    } else {
+                        FirebaseHelper.getInstance().createAccount(emailTxt, passwordTxt, accountInfo,
+                                new UserDataUpdateListener() {
+                                    @Override
+                                    public void onUpdate(@NonNull AccountInfo accountInfo, @NonNull Application application) {
+                                        final Intent mainMenuIntent = new Intent(CreateAccountActivity.this, MainMenuActivity.class);
+                                        runOnUiThread(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                startActivity(mainMenuIntent);
+                                                finish();
+                                            }
+                                        });
+                                    }
+                                },
+                                new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        Toast.makeText(CreateAccountActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                    }
+                                });
+                    }
+                }
                 break;
-
-
-
         }
     }
 }

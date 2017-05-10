@@ -26,9 +26,9 @@ public final class AccountInfo implements Validatable {
     private String city = "";
     private String zipCode = "";
     private String country = "";
+    private String phone = "";
 
     private String email = "";
-    private String username = ""; // TODO: 4/29/17 maybe remove?
 
     /**
      * For serialization purposes
