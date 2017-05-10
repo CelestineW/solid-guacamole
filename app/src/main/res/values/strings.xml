@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">"Application"</string>
+    <string name="app_name">BUEPL Application</string>
 
     <!-- Form field names -->
     <string name="address">Address</string>

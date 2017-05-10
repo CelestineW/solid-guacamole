@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button nextButton;
+    Button submitButton;
 
     EditText editTextFirstName;
     EditText editTextMI;
@@ -21,6 +21,11 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     EditText editTextZipCode;
     EditText editTextCountry;
     EditText editTextPhoneNumber;
+
+    EditText editTextEmail;
+    EditText editTextUsername;
+    EditText editTextPassword;
+    EditText editTextRetypePassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +41,13 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         editTextCountry = (EditText) findViewById(R.id.editText20);
         editTextPhoneNumber = (EditText) findViewById(R.id.editText21);
 
-        nextButton = (Button) findViewById(R.id.button6);
-        nextButton.setOnClickListener(this);
+        editTextEmail = (EditText) findViewById(R.id.editText5);
+        editTextUsername = (EditText) findViewById(R.id.editText3);
+        editTextPassword = (EditText) findViewById(R.id.editText4);
+        editTextRetypePassword = (EditText) findViewById(R.id.editText6);
+
+        submitButton = (Button) findViewById(R.id.button6);
+        submitButton.setOnClickListener(this);
     }
 
     @Override
@@ -56,8 +66,13 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                 String countryTxt = editTextCountry.getText().toString();
                 String phoneNumber = editTextPhoneNumber.getText().toString();
 
-                Intent nextCreate = new Intent(this, CreateAccountActivity2.class);
-                startActivity(nextCreate);
+                String emailTxt = editTextEmail.getText().toString();
+                String usernameTxt = editTextUsername.getText().toString();
+                String passwordTxt = editTextPassword.getText().toString();
+                String retypePasswordTxt = editTextRetypePassword.getText().toString();
+
+                Intent mainMenuIntent = new Intent(this, MainMenuActivity.class);
+                startActivity(mainMenuIntent);
 
                 break;
 
