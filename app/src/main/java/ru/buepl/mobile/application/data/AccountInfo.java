@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import ru.buepl.mobile.application.R;
@@ -14,6 +15,7 @@ import ru.buepl.mobile.application.data.validation.ValidationError;
 import static ru.buepl.mobile.application.data.validation.Validation.*;
 
 @Data
+@AllArgsConstructor
 @Builder(builderClassName = "Builder")
 public final class AccountInfo implements Validatable {
     private String firstName = "";
