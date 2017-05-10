@@ -16,8 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProgramChoiceActivity"></activity>
-
+        <activity android:name=".MainMenuActivity" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".CreateAccountActivity2" />
+        <activity android:name=".ApplicationActivity1" />
+        <activity android:name=".ProgramSelectionActivity" />
+        <activity android:name=".IdentificationActivity" />
+        <activity android:name=".PersonalInfoActivity"></activity>
     </application>
 
 </manifest>

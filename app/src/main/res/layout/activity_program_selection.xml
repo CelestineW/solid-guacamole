@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.buepl.mobile.application.ProgramSelectionActivity">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:text="Please Select an Application"
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:textColor="#750825"
+            android:textSize="9pt"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView01"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/allow"
+                android:layout_width="0.0dip"
+                android:layout_height="160dp"
+                android:layout_weight="1.0"
+                android:text="Higher Education Application"
+                android:textColor="@android:color/white"
+                android:background="#750825"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="5dp"
+                 />
+
+            <Button
+                android:id="@+id/deny"
+                android:layout_width="0.0dip"
+                android:layout_height="160dp"
+                android:layout_weight="1.0"
+                android:text="Professional Development Program Application"
+                android:textColor="@android:color/white"
+                android:background="#750825"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="5dp"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
