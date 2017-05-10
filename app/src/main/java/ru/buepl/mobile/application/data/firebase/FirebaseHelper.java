@@ -27,7 +27,7 @@ public enum FirebaseHelper {
     INSTANCE;
 
     private static final String USERS_CHILD = "users";
-    private static final String ACCOUNT_INFO_CHILD = "currentAccountInfo";
+    private static final String ACCOUNT_INFO_CHILD = "account-info";
     private static final String APPLICATION_CHILD = "application";
 
     /**
@@ -43,7 +43,7 @@ public enum FirebaseHelper {
     private final DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
 
     private volatile Application currentApplication = null;
-    private volatile AccountInfo currentAccountInfo;
+    private volatile AccountInfo currentAccountInfo = null;
 
     /**
      * Returns {@code true} if a user is logged in; {@code false} otherwise.
@@ -74,6 +74,8 @@ public enum FirebaseHelper {
                         if (task.isSuccessful()) {
                             fetchRemoteDataForUser(onLoginSuccess);
                         } else {
+                            Log.e("[login]", "failed", task.getException());
+
                             if (onLoginFailure != null) {
                                 onLoginFailure.onComplete(task);
                             }
@@ -81,7 +83,6 @@ public enum FirebaseHelper {
                     }
                 });
     }
-
 
     /**
      * Creates a new Firebase account.
@@ -103,9 +104,15 @@ public enum FirebaseHelper {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            saveAccountInfoForCurrentUser(accountInfo);
-                            fetchRemoteDataForUser(onSuccess);
+                            saveAccountInfoForCurrentUser(accountInfo, new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    fetchRemoteDataForUser(onSuccess);
+                                }
+                            });
                         } else {
+                            Log.e("[create account]", "failed", task.getException());
+
                             if (onFailure != null) {
                                 onFailure.onComplete(task);
                             }
@@ -151,7 +158,7 @@ public enum FirebaseHelper {
                                 .child(APPLICATION_CHILD)
                                 .getValue(Application.class);
                         if (application == null) {
-                            application = new Application();
+                            application = Application.empty();
                         }
                         currentApplication = application;
 
@@ -215,6 +222,10 @@ public enum FirebaseHelper {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        if (!task.isSuccessful()) {
+                            Log.e("[save account info]", "failed", task.getException());
+                        }
+
                         if (listener != null) {
                             listener.onComplete(task);
                         }
@@ -251,6 +262,10 @@ public enum FirebaseHelper {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        if (!task.isSuccessful()) {
+                            Log.e("[save application]", "failed", task.getException());
+                        }
+
                         if (listener != null) {
                             listener.onComplete(task);
                         }
