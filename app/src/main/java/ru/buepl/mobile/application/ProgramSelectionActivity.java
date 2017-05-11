@@ -41,7 +41,7 @@ public class ProgramSelectionActivity extends AppCompatActivity implements View.
                 break;
 
             case R.id.professional:
-                Intent professionalDevelopmentIntent = new Intent(this, ProDevProgramSelectionActivity.class);
+                Intent professionalDevelopmentIntent = new Intent(this, ProDevApplicationTypeActivity.class);
                 startActivity(professionalDevelopmentIntent);
 
                 break;
