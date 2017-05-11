@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.buepl.mobile.application.ProDevSubmitActivity">
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/textView38"
+        android:textColor="#750825"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish and Submit?"
+        android:textSize="50sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="134dp"
+        android:layout_marginTop="133dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:textColor="@android:color/white"
+        android:background="#750825"
+        android:textSize="35sp"
+        android:id="@+id/pro_dev_submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="284dp"
+        android:layout_marginTop="128dp"
+        android:layout_below="@+id/textView38"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

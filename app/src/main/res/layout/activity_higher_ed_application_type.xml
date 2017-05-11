@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.buepl.mobile.application.HigherEdApplicationTypeActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="40dp">
+
+
+
+        <TableRow
+            android:paddingBottom="50dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Application for: "
+                tools:layout_editor_absoluteX="0dp"
+                android:gravity="center"
+                tools:layout_editor_absoluteY="81dp" />
+
+            <Spinner
+                android:id="@+id/higher_ed_application_spinner"
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView28"
+                android:layout_toEndOf="@+id/textView28"
+                android:layout_toRightOf="@+id/textView28"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="81dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="50dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp"
+            android:gravity="center">
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView29"
+                android:layout_centerHorizontal="true"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="81dp">
+
+                <RadioButton
+                    android:id="@+id/evening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Evening" />
+
+                <RadioButton
+                    android:id="@+id/day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Day" />
+
+                <RadioButton
+                    android:id="@+id/correspondence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Correspondence" />
+
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView28"
+            android:layout_alignStart="@+id/textView28"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:gravity="center"
+            android:text="Select Academic Program:"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="81dp" />
+
+        <TableRow
+            android:gravity="center">
+
+
+            <Spinner
+                android:id="@+id/higher_ed_choice1"
+                android:layout_height="fill_parent"
+                android:layout_alignLeft="@+id/higher_ed_application_spinner"
+                android:layout_alignStart="@+id/higher_ed_application_spinner"
+                android:layout_below="@+id/textView29"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="81dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:gravity="center">
+
+
+            <Spinner
+                android:id="@+id/higher_ed_choice2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/higher_ed_choice1"
+                android:layout_alignStart="@+id/higher_ed_choice1"
+                android:layout_below="@+id/higher_ed_choice1"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="81dp" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center">
+
+            <Spinner
+                android:id="@+id/higher_ed_choice3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/higher_ed_choice2"
+                android:layout_alignStart="@+id/higher_ed_choice2"
+                android:layout_below="@+id/higher_ed_choice2"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="81dp" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</ScrollView>
