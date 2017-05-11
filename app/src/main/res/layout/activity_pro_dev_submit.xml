@@ -23,7 +23,7 @@
 
     <Button
         android:textColor="@android:color/white"
-        android:background="#750825"
+        android:background="#6B0F1B"
         android:textSize="35sp"
         android:id="@+id/pro_dev_submit_button"
         android:layout_width="wrap_content"
