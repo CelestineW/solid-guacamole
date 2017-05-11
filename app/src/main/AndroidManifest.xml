@@ -26,8 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HigherEdApplicationTypeActivity"></activity>
+        <activity android:name=".HigherEdApplicationTypeActivity" />
         <activity android:name=".ProDevApplicationTypeActivity" />
+        <activity android:name=".AcademicInformationActivity"></activity>
     </application>
 
 </manifest>

@@ -36,7 +36,7 @@ public class ProgramSelectionActivity extends AppCompatActivity implements View.
 
             case R.id.higherEducation:
                 //Toast.makeText(getApplicationContext(), "reach to here #1",Toast.LENGTH_LONG).show();
-                Intent higherEducationApplicationIntent = new Intent(this,PersonalInfoActivity .class);
+                Intent higherEducationApplicationIntent = new Intent(this, HigherEdApplicationTypeActivity .class);
                 startActivity(higherEducationApplicationIntent);
                 break;
 
