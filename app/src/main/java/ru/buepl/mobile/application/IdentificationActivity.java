@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import ru.buepl.mobile.application.data.shared.Identification;
+
 public class IdentificationActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button nextButton;
