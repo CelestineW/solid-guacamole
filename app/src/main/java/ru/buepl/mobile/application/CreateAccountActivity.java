@@ -83,8 +83,10 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                         .build();
 
                 if (Validation.validateAndToastFirstError(accountInfo, this)) {
-                    if (!passwordTxt.equals(retypePasswordTxt)) {
-                        Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    if (passwordTxt.isEmpty()) {
+                        Toast.makeText(this, getResources().getString(R.string.password_is_empty), Toast.LENGTH_SHORT).show();
+                    } else if (!passwordTxt.equals(retypePasswordTxt)) {
+                        Toast.makeText(this, getResources().getString(R.string.passwords_do_not_match), Toast.LENGTH_SHORT).show();
                     } else {
                         FirebaseHelper.getInstance().createAccount(emailTxt, passwordTxt, accountInfo,
                                 new UserDataUpdateListener() {
