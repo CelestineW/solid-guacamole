@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import ru.buepl.mobile.application.data.shared.PersonalInfo;
-
 public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button programButton, appButton, webButton, galleryButton;
@@ -18,10 +16,10 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        programButton = (Button) findViewById(R.id.b_academicProgs);
-        appButton = (Button) findViewById(R.id.b_app);
-        webButton = (Button) findViewById(R.id.b_mainWeb);
-        galleryButton = (Button) findViewById(R.id.b_gallery);
+        programButton = (Button) findViewById(R.id.main_menu_academic_programs);
+        appButton = (Button) findViewById(R.id.main_menu_application);
+        webButton = (Button) findViewById(R.id.main_menu_website);
+        galleryButton = (Button) findViewById(R.id.main_menu_gallery);
 
         programButton.setOnClickListener(this);
         appButton.setOnClickListener(this);
@@ -36,7 +34,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
 
         switch(v.getId()){
 
-            case R.id.b_academicProgs:
+            case R.id.main_menu_academic_programs:
 
                 /*
                 Intent academicPrograms = new Intent(this, AcademicActivity.class);
@@ -44,20 +42,20 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 */
 
                 break;
-            case R.id.b_app:
+            case R.id.main_menu_application:
 
                 Intent infoIntent = new Intent(this, PersonalInfoActivity.class);
                 startActivity(infoIntent);
 
                 break;
 
-            case R.id.b_mainWeb:
+            case R.id.main_menu_website:
 
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://buepl.ru/"));
                 startActivity(webIntent);
                 break;
 
-            case R.id.b_gallery:
+            case R.id.main_menu_gallery:
                  /*
                 Intent galleryIntent = new Intent(this, GalleryActivity.class);
                 startActivity(galleryIntent);

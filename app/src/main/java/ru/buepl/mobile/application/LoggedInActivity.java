@@ -86,7 +86,7 @@ abstract class LoggedInActivity extends AppCompatActivity {
     private void doLogout() {
         FirebaseHelper.getInstance().logout();
 
-        final Intent intent = new Intent(LoggedInActivity.this, LoginActivity.class);
+        final Intent intent = new Intent(LoggedInActivity.this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
         runOnUiThread(new Runnable() {
             @Override

@@ -1,25 +1,31 @@
 package ru.buepl.mobile.application.data;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import ru.buepl.mobile.application.data.shared.Identification;
+import ru.buepl.mobile.application.data.shared.PersonalInfo;
 
 @Data
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Builder(builderClassName = "Builder")
 public final class Application {
+    private PersonalInfo personalInfo;
+    private Identification identification;
     private Type type;
     private HigherEducationApplication higherEducationApplication;
     private ProfessionalDevelopmentApplication professionalDevelopmentApplication;
 
+    /**
+     * For serialization purposes
+     */
+    private Application() {}
+
     public static Application empty() {
-        return new Application(Type.NONE, null, null);
-    }
-
-    public static Application forHigherEducation(HigherEducationApplication application) {
-        return new Application(Type.HIGHER_EDUCATION, application, null);
-    }
-
-    public static Application forProfessionalDevelopment(ProfessionalDevelopmentApplication application) {
-        return new Application(Type.PROFESSIONAL_DEVELOPMENT, null, application);
+        return Application.builder()
+                .type(Type.NONE)
+                .build();
     }
 
     public enum Type {

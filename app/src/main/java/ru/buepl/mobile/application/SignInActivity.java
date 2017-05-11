@@ -30,10 +30,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        editTextUsername = (EditText) findViewById(R.id.editText);
-        editTextPassword = (EditText) findViewById(R.id.editText2);
+        editTextUsername = (EditText) findViewById(R.id.login_email);
+        editTextPassword = (EditText) findViewById(R.id.login_password);
 
-        signIn = (Button) findViewById(R.id.button4);
+        signIn = (Button) findViewById(R.id.login_button);
         signIn.setOnClickListener(this);
     }
 
@@ -41,7 +41,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
 
-            case R.id.button4:
+            case R.id.login_button:
 
                 String usernameTxt = editTextUsername.getText().toString().trim();
                 String passwordTxt = editTextPassword.getText().toString();

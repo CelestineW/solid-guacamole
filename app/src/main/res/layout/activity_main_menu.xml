@@ -30,7 +30,7 @@
             android:layout_weight="1" >
 
             <Button
-                android:id="@+id/b_academicProgs"
+                android:id="@+id/main_menu_academic_programs"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -40,7 +40,7 @@
                 android:layout_margin="5dp"/>
 
             <Button
-                android:id="@+id/b_app"
+                android:id="@+id/main_menu_application"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -57,7 +57,7 @@
             android:layout_weight="1" >
 
             <Button
-                android:id="@+id/b_mainWeb"
+                android:id="@+id/main_menu_website"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -67,7 +67,7 @@
                 android:layout_margin="5dp"/>
 
             <Button
-                android:id="@+id/b_gallery"
+                android:id="@+id/main_menu_gallery"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
