@@ -7,13 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-import lombok.Getter;
 import ru.buepl.mobile.application.data.Application;
 import ru.buepl.mobile.application.data.firebase.FirebaseHelper;
 import ru.buepl.mobile.application.data.shared.Identification;
@@ -40,6 +38,21 @@ public class IdentificationActivity extends LoggedInActivity implements View.OnC
 
         nextButton = (Button) findViewById(R.id.button7);
         nextButton.setOnClickListener(this);
+
+        // Load application data
+        Identification identification = FirebaseHelper.getInstance()
+                .getApplication()
+                .getIdentification();
+        editTextDateOfBirth.setText(identification.getBirthDate());
+        editTextPlaceOfBirth.setText(identification.getPlaceOfBirth());
+        editTextCitizenship.setText(identification.getCitizenship());
+
+        Identification.Gender gender = identification.getGender();
+        if (gender == Identification.Gender.FEMALE) {
+            radioGroupGender.check(R.id.radio_gender_female);
+        } else if (gender == Identification.Gender.MALE) {
+            radioGroupGender.check(R.id.radio_gender_male);
+        }
     }
 
     @Override
@@ -65,10 +78,10 @@ public class IdentificationActivity extends LoggedInActivity implements View.OnC
     protected Application collectApplicationDataToSave() {
         Identification.Gender gender;
         switch (radioGroupGender.getCheckedRadioButtonId()) {
-            case R.id.radioButton2:
+            case R.id.radio_gender_female:
                 gender = Identification.Gender.FEMALE;
                 break;
-            case R.id.radioButton3:
+            case R.id.radio_gender_male:
                 gender = Identification.Gender.MALE;
                 break;
             case -1:

@@ -65,7 +65,7 @@
         android:id="@+id/radioGroup">
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radio_gender_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/editText10"
@@ -75,12 +75,12 @@
             android:text="Female" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radio_gender_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/radioButton2"
-            android:layout_toEndOf="@+id/radioButton2"
-            android:layout_toRightOf="@+id/radioButton2"
+            android:layout_alignBottom="@+id/radio_gender_female"
+            android:layout_toEndOf="@+id/radio_gender_female"
+            android:layout_toRightOf="@+id/radio_gender_female"
             android:text="Male" />
     </RadioGroup>
 

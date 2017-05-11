@@ -40,6 +40,18 @@ public class PersonalInfoActivity extends LoggedInActivity implements View.OnCli
 
         nextButton = (Button) findViewById(R.id.button8);
         nextButton.setOnClickListener(this);
+
+        // Load application data
+        PersonalInfo personalInfo = FirebaseHelper.getInstance()
+                .getApplication()
+                .getPersonalInfo();
+        PassportInfo passportInfo = personalInfo.getPassportInfo();
+
+        editTextHomePhoneNumber.setText(personalInfo.getHomePhone());
+        editTextCellPhoneNumber.setText(personalInfo.getCellPhone());
+        editTextPassportNumber.setText(passportInfo.getNumber());
+        editTextIssueDate.setText(passportInfo.getIssueDate());
+        editTextIssuedBy.setText(passportInfo.getIssuedBy());
     }
 
     @Override
