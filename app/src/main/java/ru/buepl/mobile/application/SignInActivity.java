@@ -57,11 +57,12 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                             new UserDataUpdateListener() {
                                 @Override
                                 public void onUpdate(@NonNull AccountInfo accountInfo, @NonNull Application application) {
-                                    final Intent programChoice = new Intent(SignInActivity.this, MainMenuActivity.class);
+                                    final Intent intent = new Intent(SignInActivity.this, MainMenuActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            startActivity(programChoice);
+                                            startActivity(intent);
                                             finish();
                                         }
                                     });

@@ -92,11 +92,12 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                                 new UserDataUpdateListener() {
                                     @Override
                                     public void onUpdate(@NonNull AccountInfo accountInfo, @NonNull Application application) {
-                                        final Intent mainMenuIntent = new Intent(CreateAccountActivity.this, MainMenuActivity.class);
+                                        final Intent intent = new Intent(CreateAccountActivity.this, MainMenuActivity.class);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         runOnUiThread(new Runnable() {
                                             @Override
                                             public void run() {
-                                                startActivity(mainMenuIntent);
+                                                startActivity(intent);
                                                 finish();
                                             }
                                         });
