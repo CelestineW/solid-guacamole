@@ -43,15 +43,18 @@ public class IdentificationActivity extends LoggedInActivity implements View.OnC
         Identification identification = FirebaseHelper.getInstance()
                 .getApplication()
                 .getIdentification();
-        editTextDateOfBirth.setText(identification.getBirthDate());
-        editTextPlaceOfBirth.setText(identification.getPlaceOfBirth());
-        editTextCitizenship.setText(identification.getCitizenship());
 
-        Identification.Gender gender = identification.getGender();
-        if (gender == Identification.Gender.FEMALE) {
-            radioGroupGender.check(R.id.radio_gender_female);
-        } else if (gender == Identification.Gender.MALE) {
-            radioGroupGender.check(R.id.radio_gender_male);
+        if (identification != null) {
+            editTextDateOfBirth.setText(identification.getBirthDate());
+            editTextPlaceOfBirth.setText(identification.getPlaceOfBirth());
+            editTextCitizenship.setText(identification.getCitizenship());
+
+            Identification.Gender gender = identification.getGender();
+            if (gender == Identification.Gender.FEMALE) {
+                radioGroupGender.check(R.id.radio_gender_female);
+            } else if (gender == Identification.Gender.MALE) {
+                radioGroupGender.check(R.id.radio_gender_male);
+            }
         }
     }
 

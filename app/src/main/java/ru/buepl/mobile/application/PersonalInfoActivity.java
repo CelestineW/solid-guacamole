@@ -45,13 +45,17 @@ public class PersonalInfoActivity extends LoggedInActivity implements View.OnCli
         PersonalInfo personalInfo = FirebaseHelper.getInstance()
                 .getApplication()
                 .getPersonalInfo();
-        PassportInfo passportInfo = personalInfo.getPassportInfo();
+        if (personalInfo != null) {
+            editTextHomePhoneNumber.setText(personalInfo.getHomePhone());
+            editTextCellPhoneNumber.setText(personalInfo.getCellPhone());
 
-        editTextHomePhoneNumber.setText(personalInfo.getHomePhone());
-        editTextCellPhoneNumber.setText(personalInfo.getCellPhone());
-        editTextPassportNumber.setText(passportInfo.getNumber());
-        editTextIssueDate.setText(passportInfo.getIssueDate());
-        editTextIssuedBy.setText(passportInfo.getIssuedBy());
+            PassportInfo passportInfo = personalInfo.getPassportInfo();
+            if (passportInfo != null) {
+                editTextPassportNumber.setText(passportInfo.getNumber());
+                editTextIssueDate.setText(passportInfo.getIssueDate());
+                editTextIssuedBy.setText(passportInfo.getIssuedBy());
+            }
+        }
     }
 
     @Override
