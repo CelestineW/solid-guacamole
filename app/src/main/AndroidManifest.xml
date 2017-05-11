@@ -27,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HigherEdApplicationTypeActivity"></activity>
+        <activity android:name=".ProDevApplicationTypeActivity" />
     </application>
 
 </manifest>
