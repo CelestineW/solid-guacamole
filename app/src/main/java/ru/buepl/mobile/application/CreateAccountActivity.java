@@ -18,6 +18,7 @@ import ru.buepl.mobile.application.data.Application;
 import ru.buepl.mobile.application.data.firebase.FirebaseHelper;
 import ru.buepl.mobile.application.data.firebase.UserDataUpdateListener;
 import ru.buepl.mobile.application.data.validation.Validation;
+import ru.buepl.mobile.application.util.Toaster;
 
 public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -113,7 +114,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                                 new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
-                                        Toast.makeText(CreateAccountActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                        Toaster.toastException(CreateAccountActivity.this, task.getException());
                                     }
                                 });
                     }

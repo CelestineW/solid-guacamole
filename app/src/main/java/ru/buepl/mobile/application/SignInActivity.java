@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,6 +16,7 @@ import ru.buepl.mobile.application.data.AccountInfo;
 import ru.buepl.mobile.application.data.Application;
 import ru.buepl.mobile.application.data.firebase.FirebaseHelper;
 import ru.buepl.mobile.application.data.firebase.UserDataUpdateListener;
+import ru.buepl.mobile.application.util.Toaster;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -64,12 +64,9 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                         new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(SignInActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                Toaster.toastException(SignInActivity.this, task.getException());
                             }
                         });
-
-                Intent programChoice = new Intent(this, MainMenuActivity.class);
-                startActivity(programChoice);
 
                 break;
         }
