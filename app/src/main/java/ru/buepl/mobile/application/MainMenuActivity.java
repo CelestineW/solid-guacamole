@@ -2,12 +2,14 @@ package ru.buepl.mobile.application;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener {
+import ru.buepl.mobile.application.data.Application;
+
+public class MainMenuActivity extends LoggedInActivity implements View.OnClickListener {
 
     Button programButton, appButton, webButton, galleryButton;
 
@@ -64,5 +66,11 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
 
         }
 
+    }
+
+    @Nullable
+    @Override
+    protected Application collectApplicationDataToSave() {
+        return null;
     }
 }
