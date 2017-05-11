@@ -9,9 +9,7 @@ import ru.buepl.mobile.application.data.shared.PersonalInfo;
 @Data
 @Builder(builderClassName = "Builder")
 public final class HigherEducationApplication {
-    private PersonalInfo personalInfo;
     private ApplicationType applicationType;
-    private Identification identification;
     private AcademicInfo academicInfo;
     private Transcript transcript;
     private AdvancePlacement advancePlacement;
