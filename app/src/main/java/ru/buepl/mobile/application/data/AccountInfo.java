@@ -39,10 +39,11 @@ public final class AccountInfo implements Validatable {
         return aggregateErrors(
                 nonEmptyString(firstName, R.string.first_name, context),
                 nonEmptyString(lastName, R.string.last_name, context),
-                nonEmptyString(address, R.string.address, context),
+                nonEmptyString(address, R.string.street_address, context),
                 nonEmptyString(city, R.string.city, context),
                 nonEmptyString(zipCode, R.string.zip_code, context),
                 nonEmptyString(country, R.string.country, context),
+                nonEmptyString(phone, R.string.phone_number, context),
                 nonEmptyString(email, R.string.email, context)
         );
     }
