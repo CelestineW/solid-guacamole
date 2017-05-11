@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.buepl.mobile.application.AcademicInformationActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="40dp">
+
+        <TableRow
+            android:paddingBottom="50dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current Education Level" />
+
+            <Spinner
+                android:paddingLeft="5dp"
+                android:id="@+id/current_edu_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+
+        <TableRow
+            android:paddingBottom="50dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Supporting Documentation" />
+
+            <Spinner
+                android:paddingLeft="5dp"
+                android:id="@+id/edu_documentation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+
+        <TableRow
+            android:gravity="center">
+
+            <GridLayout
+                android:columnCount="2"
+                android:rowCount="7">
+
+                <Space
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"/>
+
+
+                <EditText
+                    android:id="@+id/editText22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Document No." />
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"/>
+
+                <EditText
+                    android:id="@+id/editText22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Document No." />
+
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"/>
+
+                <EditText
+                    android:id="@+id/editText22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Document No." />
+
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"/>
+
+
+                <EditText
+                    android:id="@+id/editText22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Document No." />
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"/>
+
+                <EditText
+                    android:id="@+id/editText22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Document No." />
+
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"/>
+
+                <EditText
+                    android:id="@+id/editText22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Document No." />
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"/>
+
+
+                <EditText
+                    android:id="@+id/editText22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Document No." />
+
+
+
+
+            </GridLayout>
+
+
+        </TableRow>
+
+        <TableRow
+            android:gravity="center">
+
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</ScrollView>
