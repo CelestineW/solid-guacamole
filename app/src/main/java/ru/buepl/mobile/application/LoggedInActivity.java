@@ -17,6 +17,14 @@ import ru.buepl.mobile.application.data.firebase.FirebaseHelper;
 
 
 abstract class LoggedInActivity extends AppCompatActivity {
+    private volatile boolean loggingOut = false;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        loggingOut = false;
+    }
+
     /**
      * Collects application data to be saved.
      * <p>
@@ -62,7 +70,9 @@ abstract class LoggedInActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        saveApplicationData(null);
+        if (!loggingOut) {
+            saveApplicationData(null);
+        }
     }
 
     @Override
@@ -99,6 +109,7 @@ abstract class LoggedInActivity extends AppCompatActivity {
      * Logs out and finishes this activity.
      */
     private void doLogout() {
+        loggingOut = true;
         FirebaseHelper.getInstance().logout();
 
         final Intent intent = new Intent(LoggedInActivity.this, HomeActivity.class);
