@@ -27,9 +27,9 @@ public class ProDevEducationActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pro_dev_education);
 
-        Button nextButton = (Button)findViewById(R.id.pro_dev_button2);
+        nextButton = (Button)findViewById(R.id.pro_dev_button2);
         nextButton.setOnClickListener(this);
-        Button photoAttachButton = (Button)findViewById(R.id.pro_dev_photo_button);
+        photoAttachButton = (Button)findViewById(R.id.pro_dev_photo_button);
         photoAttachButton.setOnClickListener(this);
         //editTextDateOfBirth = (EditText) findViewById(R.id.editText8);
         editTextDocumentationNo = (EditText)findViewById(R.id.textDocumentNo);
