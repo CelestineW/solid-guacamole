@@ -14,9 +14,18 @@ import com.google.android.gms.tasks.Task;
 
 import ru.buepl.mobile.application.data.Application;
 import ru.buepl.mobile.application.data.firebase.FirebaseHelper;
+import ru.buepl.mobile.application.util.Toaster;
 
 
 abstract class LoggedInActivity extends AppCompatActivity {
+    private volatile boolean loggingOut = false;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        loggingOut = false;
+    }
+
     /**
      * Collects application data to be saved.
      * <p>
@@ -38,13 +47,32 @@ abstract class LoggedInActivity extends AppCompatActivity {
      * @return true if there is data to save (and the callback will be invoked);
      * false otherwise.
      */
-    protected final boolean saveApplicationData(@Nullable OnCompleteListener<Void> listener) {
+    protected final boolean saveApplicationData(@Nullable final OnCompleteListener<Void> listener) {
         Application application = collectApplicationDataToSave();
         if (application != null) {
-            FirebaseHelper.getInstance().saveApplicationForCurrentUser(application, listener);
+            FirebaseHelper.getInstance().saveApplicationForCurrentUser(application, new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (!task.isSuccessful()) {
+                        Toaster.toastException(LoggedInActivity.this, task.getException());
+                    }
+
+                    if (listener != null) {
+                        listener.onComplete(task);
+                    }
+                }
+            });
             return true;
         } else {
             return false;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (!loggingOut) {
+            saveApplicationData(null);
         }
     }
 
@@ -62,8 +90,6 @@ abstract class LoggedInActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
                                     doLogout();
-                                } else {
-                                    Toast.makeText(LoggedInActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                 }
                             }
                         };
@@ -84,6 +110,7 @@ abstract class LoggedInActivity extends AppCompatActivity {
      * Logs out and finishes this activity.
      */
     private void doLogout() {
+        loggingOut = true;
         FirebaseHelper.getInstance().logout();
 
         final Intent intent = new Intent(LoggedInActivity.this, HomeActivity.class);

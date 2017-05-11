@@ -66,34 +66,27 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
             case R.id.create_account_button:
 
-                String firstNameTxt = editTextFirstName.getText().toString().trim();
-                String MITxt = editTextMI.getText().toString().trim();
-                String lastNameTxt = editTextLastName.getText().toString().trim();
-                String streetAddressTxt = editTextStreetAddress.getText().toString().trim();
-                String cityTxt = editTextCity.getText().toString().trim();
-                String zipCodeTxt = editTextZipCode.getText().toString().trim();
-                String countryTxt = editTextCountry.getText().toString().trim();
-                String phoneNumber = editTextPhoneNumber.getText().toString().trim();
-
                 String emailTxt = editTextEmail.getText().toString().trim();
                 String passwordTxt = editTextPassword.getText().toString();
                 String retypePasswordTxt = editTextRetypePassword.getText().toString();
 
                 AccountInfo accountInfo = AccountInfo.builder()
-                        .firstName(firstNameTxt)
-                        .middleName(MITxt)
-                        .lastName(lastNameTxt)
-                        .address(streetAddressTxt)
-                        .city(cityTxt)
-                        .zipCode(zipCodeTxt)
-                        .country(countryTxt)
+                        .firstName(editTextFirstName.getText().toString().trim())
+                        .middleInitial(editTextMI.getText().toString().trim())
+                        .lastName(editTextLastName.getText().toString().trim())
+                        .address(editTextStreetAddress.getText().toString().trim())
+                        .city(editTextCity.getText().toString().trim())
+                        .zipCode(editTextZipCode.getText().toString().trim())
+                        .country(editTextCountry.getText().toString().trim())
+                        .phone(editTextPhoneNumber.getText().toString().trim())
                         .email(emailTxt)
-                        .phone(phoneNumber)
                         .build();
 
                 if (Validation.validateAndToastFirstError(accountInfo, this)) {
-                    if (!passwordTxt.equals(retypePasswordTxt)) {
-                        Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    if (passwordTxt.isEmpty()) {
+                        Toast.makeText(this, getResources().getString(R.string.password_is_empty), Toast.LENGTH_SHORT).show();
+                    } else if (!passwordTxt.equals(retypePasswordTxt)) {
+                        Toast.makeText(this, getResources().getString(R.string.passwords_do_not_match), Toast.LENGTH_SHORT).show();
                     } else {
                         FirebaseHelper.getInstance().createAccount(emailTxt, passwordTxt, accountInfo,
                                 new UserDataUpdateListener() {

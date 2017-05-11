@@ -4,10 +4,12 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import ru.buepl.mobile.application.data.shared.Identification;
 import ru.buepl.mobile.application.data.shared.PersonalInfo;
 
 @Data
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder(builderClassName = "Builder")
 public final class Application {
@@ -16,11 +18,6 @@ public final class Application {
     private Type type;
     private HigherEducationApplication higherEducationApplication;
     private ProfessionalDevelopmentApplication professionalDevelopmentApplication;
-
-    /**
-     * For serialization purposes
-     */
-    private Application() {}
 
     public static Application empty() {
         return Application.builder()

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,7 +23,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     Button signIn;
 
-    EditText editTextUsername;
+    EditText editTextEmail;
     EditText editTextPassword;
 
     @Override
@@ -30,7 +31,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        editTextUsername = (EditText) findViewById(R.id.login_email);
+        editTextEmail = (EditText) findViewById(R.id.login_email);
         editTextPassword = (EditText) findViewById(R.id.login_password);
 
         signIn = (Button) findViewById(R.id.login_button);
@@ -43,31 +44,36 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.login_button:
 
-                String usernameTxt = editTextUsername.getText().toString().trim();
-                String passwordTxt = editTextPassword.getText().toString();
+                String email = editTextEmail.getText().toString().trim();
+                String password = editTextPassword.getText().toString();
 
-                FirebaseHelper helper = FirebaseHelper.getInstance();
-                helper.login(usernameTxt, passwordTxt,
-                        new UserDataUpdateListener() {
-                            @Override
-                            public void onUpdate(@NonNull AccountInfo accountInfo, @NonNull Application application) {
-                                final Intent programChoice = new Intent(SignInActivity.this, MainMenuActivity.class);
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        startActivity(programChoice);
-                                        finish();
-                                    }
-                                });
-                            }
-                        },
-                        new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toaster.toastException(SignInActivity.this, task.getException());
-                            }
-                        });
-
+                if (email.isEmpty()) {
+                    Toast.makeText(this, getResources().getString(R.string.email_is_empty), Toast.LENGTH_SHORT).show();
+                } else if (password.isEmpty()) {
+                    Toast.makeText(this, getResources().getString(R.string.password_is_empty), Toast.LENGTH_SHORT).show();
+                } else {
+                    FirebaseHelper helper = FirebaseHelper.getInstance();
+                    helper.login(email, password,
+                            new UserDataUpdateListener() {
+                                @Override
+                                public void onUpdate(@NonNull AccountInfo accountInfo, @NonNull Application application) {
+                                    final Intent programChoice = new Intent(SignInActivity.this, MainMenuActivity.class);
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            startActivity(programChoice);
+                                            finish();
+                                        }
+                                    });
+                                }
+                            },
+                            new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    Toaster.toastException(SignInActivity.this, task.getException());
+                                }
+                            });
+                }
                 break;
         }
     }

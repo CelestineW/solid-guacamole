@@ -76,9 +76,12 @@
     <string name="zip_code">Zip Code</string>
 
     <!-- Validation messages -->
-    <string name="missing_field">Missing field: </string>
+    <string name="email_is_empty">Email address is empty</string>
     <string name="incomplete_section">Incomplete section: </string>
     <string name="invalid_field">Invalid field: </string>
+    <string name="missing_field">Missing field: </string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="password_is_empty">Password is empty</string>
     <string name="validation_separator">-></string>
 
     <!-- Misc -->
