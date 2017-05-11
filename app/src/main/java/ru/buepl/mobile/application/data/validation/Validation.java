@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,6 +20,25 @@ import ru.buepl.mobile.application.R;
  */
 public final class Validation {
     private Validation() {}
+
+    /**
+     * Validates an object, and toasts the first error if any were encountered.
+     *
+     * @param validatable the object to validate
+     * @param context     the {@link Context} with which to perform the validation
+     *                    (needed to lookup string resources)
+     * @return true if the object was valid; false otherwise
+     */
+    public static boolean validateAndToastFirstError(@NonNull Validatable validatable,
+                                                     @NonNull Context context) {
+        List<ValidationError> errors = validatable.validate(context);
+        if (errors.size() > 0) {
+            Toast.makeText(context, errors.get(0).getMessage(), Toast.LENGTH_LONG).show();
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     /**
      * Aggregates the specified lists of {@link ValidationError}s into a single list.

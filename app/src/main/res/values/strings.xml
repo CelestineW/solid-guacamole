@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">"Application"</string>
+    <string name="app_name">BUEPL Application</string>
 
     <!-- Form field names -->
     <string name="address">Address</string>
@@ -83,4 +83,6 @@
 
     <!-- Misc -->
     <string name="sign_in">Sign In</string>
+    <string name="logout">Logout</string>
+    <string name="logging_out">Logging Out…</string>
 </resources>

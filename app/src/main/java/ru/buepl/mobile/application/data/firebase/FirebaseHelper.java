@@ -27,7 +27,7 @@ public enum FirebaseHelper {
     INSTANCE;
 
     private static final String USERS_CHILD = "users";
-    private static final String ACCOUNT_INFO_CHILD = "currentAccountInfo";
+    private static final String ACCOUNT_INFO_CHILD = "account-info";
     private static final String APPLICATION_CHILD = "application";
 
     /**
@@ -42,8 +42,9 @@ public enum FirebaseHelper {
     private final FirebaseAuth auth = FirebaseAuth.getInstance();
     private final DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
 
-    private volatile Application currentApplication = null;
-    private volatile AccountInfo currentAccountInfo;
+    private final Object lock = new Object();
+    private Application currentApplication = null;
+    private AccountInfo currentAccountInfo = null;
 
     /**
      * Returns {@code true} if a user is logged in; {@code false} otherwise.
@@ -74,6 +75,8 @@ public enum FirebaseHelper {
                         if (task.isSuccessful()) {
                             fetchRemoteDataForUser(onLoginSuccess);
                         } else {
+                            Log.e("[login]", "failed", task.getException());
+
                             if (onLoginFailure != null) {
                                 onLoginFailure.onComplete(task);
                             }
@@ -81,7 +84,6 @@ public enum FirebaseHelper {
                     }
                 });
     }
-
 
     /**
      * Creates a new Firebase account.
@@ -103,9 +105,15 @@ public enum FirebaseHelper {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            saveAccountInfoForCurrentUser(accountInfo);
-                            fetchRemoteDataForUser(onSuccess);
+                            saveAccountInfoForCurrentUser(accountInfo, new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    fetchRemoteDataForUser(onSuccess);
+                                }
+                            });
                         } else {
+                            Log.e("[create account]", "failed", task.getException());
+
                             if (onFailure != null) {
                                 onFailure.onComplete(task);
                             }
@@ -144,16 +152,16 @@ public enum FirebaseHelper {
                             Log.wtf("null account info", "should not happen!!"); // TODO: 5/9/17 crash?
                             accountInfo = AccountInfo.builder().build();
                         }
-                        currentAccountInfo = accountInfo;
+                        setAccountInfo(accountInfo);
 
                         // Read application
                         Application application = dataSnapshot
                                 .child(APPLICATION_CHILD)
                                 .getValue(Application.class);
                         if (application == null) {
-                            application = new Application();
+                            application = Application.empty();
                         }
-                        currentApplication = application;
+                        setApplication(application);
 
                         if (onComplete != null) {
                             onComplete.onUpdate(accountInfo, application);
@@ -175,7 +183,15 @@ public enum FirebaseHelper {
      */
     public Application getApplication() throws IllegalStateException {
         getLoggedInUser(); // Assert that logged in
-        return currentApplication;
+        synchronized (lock) {
+            return currentApplication;
+        }
+    }
+
+    private void setApplication(Application application) {
+        synchronized (lock) {
+            currentApplication = application;
+        }
     }
 
     /**
@@ -186,7 +202,15 @@ public enum FirebaseHelper {
      */
     public AccountInfo getAccountInfo() throws IllegalStateException {
         getLoggedInUser(); // Assert that logged in
-        return currentAccountInfo;
+        synchronized (lock) {
+            return currentAccountInfo;
+        }
+    }
+
+    private void setAccountInfo(AccountInfo accountInfo) {
+        synchronized (lock) {
+            currentAccountInfo = accountInfo;
+        }
     }
 
     /**
@@ -210,11 +234,17 @@ public enum FirebaseHelper {
     public void saveAccountInfoForCurrentUser(@NonNull AccountInfo accountInfo,
                                               @Nullable final OnCompleteListener<Void> listener)
             throws IllegalStateException {
+        setAccountInfo(accountInfo);
+
         dbReferenceForCurrentUser()
                 .child(ACCOUNT_INFO_CHILD).setValue(accountInfo)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        if (!task.isSuccessful()) {
+                            Log.e("[save account info]", "failed", task.getException());
+                        }
+
                         if (listener != null) {
                             listener.onComplete(task);
                         }
@@ -243,7 +273,7 @@ public enum FirebaseHelper {
     public void saveApplicationForCurrentUser(@NonNull Application application,
                                               @Nullable final OnCompleteListener<Void> listener)
             throws IllegalStateException {
-        currentApplication = application;
+        setApplication(application);
 
         dbReferenceForCurrentUser()
                 .child(APPLICATION_CHILD)
@@ -251,6 +281,10 @@ public enum FirebaseHelper {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        if (!task.isSuccessful()) {
+                            Log.e("[save application]", "failed", task.getException());
+                        }
+
                         if (listener != null) {
                             listener.onComplete(task);
                         }
