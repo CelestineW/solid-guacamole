@@ -9,6 +9,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import ru.buepl.mobile.application.R;
 import ru.buepl.mobile.application.data.validation.Validatable;
 import ru.buepl.mobile.application.data.validation.ValidationError;
@@ -16,6 +17,7 @@ import ru.buepl.mobile.application.data.validation.ValidationError;
 import static ru.buepl.mobile.application.data.validation.Validation.*;
 
 @Data
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder(builderClassName = "Builder")
 public final class AccountInfo implements Validatable {
@@ -30,11 +32,6 @@ public final class AccountInfo implements Validatable {
     private String phone;
 
     private String email;
-
-    /**
-     * For serialization purposes
-     */
-    private AccountInfo() {}
 
     @NonNull
     @Override
