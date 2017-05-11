@@ -8,67 +8,109 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Undergraduate Programs" />
+            android:text="Undergraduate Programs"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="The Baltic University offers its students undergraduate programs in Performing Arts (Theater), Interior and Landscape Design, Graphic Design, Fashion Design, Environmental Science and Natural Resource Management, Psychology and Social Work, Jurisprudence and Business Administration." />
+            android:layout_marginBottom="10dp"
+            android:text="The Baltic University offers its students undergraduate programs in Performing Arts (Theater), Interior and Landscape Design, Graphic Design, Fashion Design, Environmental Science and Natural Resource Management, Psychology and Social Work, Jurisprudence and Business Administration."
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Adult and Professional Studies" />
+            android:text="Adult and Professional Studies"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Whether changing or advancing your career, our university offers convenient and highly respected evening and weekend programs for adults.  You can choose from a combination of on-campus 14-week semester classes and 7-week accelerated classes. You benefit from one-on-one advising, and a full complement of student services and career-building opportunities." />
+            android:layout_marginBottom="10dp"
+            android:text="Whether changing or advancing your career, our university offers convenient and highly respected evening and weekend programs for adults.  You can choose from a combination of on-campus 14-week semester classes and 7-week accelerated classes. You benefit from one-on-one advising, and a full complement of student services and career-building opportunities."
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pre-College" />
+            android:text="Pre-College"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="You don't have to wait until you are old enough to take courses at the Baltic University and begin to experience the exciting life and learning opportunities to be found here. High school students are invited to sign up for one of our fall, spring or summer pre-college programs in Performing arts (Theater), Interior Design, Landscape Design, Fashion Design, Painting, Drawing, Mathematics, Psychology and Environmental Sciences." />
+            android:layout_marginBottom="10dp"
+            android:text="You don't have to wait until you are old enough to take courses at the Baltic University and begin to experience the exciting life and learning opportunities to be found here. High school students are invited to sign up for one of our fall, spring or summer pre-college programs in Performing arts (Theater), Interior Design, Landscape Design, Fashion Design, Painting, Drawing, Mathematics, Psychology and Environmental Sciences."
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Summer Sessions" />
+            android:text="Summer Sessions"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="If you would like to spend your summer studying in the most beautiful city in the world, St. Petersburg, or need flexibility of online courses, the Baltic University's wide range of summer courses and programs is for you. Summer is perfect time to explore St. Petersburg, Russia, its beautiful and unique museums, architecture, theater and musical programs and festivals as well as world-renowned St. Petersburg White Nights." />
+            android:layout_marginBottom="10dp"
+            android:text="If you would like to spend your summer studying in the most beautiful city in the world, St. Petersburg, or need flexibility of online courses, the Baltic University's wide range of summer courses and programs is for you. Summer is perfect time to explore St. Petersburg, Russia, its beautiful and unique museums, architecture, theater and musical programs and festivals as well as world-renowned St. Petersburg White Nights."
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Online Programs" />
+            android:text="Online Programs"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="As part of its stated mission to further the search for truth through knowledge, the university offers select programs online to benefit those who desire a career-oriented education. The programs are particularly popular because of their practical, application-oriented curricula, designed to help students excel in their professional careers." />
+            android:layout_marginBottom="10dp"
+            android:text="As part of its stated mission to further the search for truth through knowledge, the university offers select programs online to benefit those who desire a career-oriented education. The programs are particularly popular because of their practical, application-oriented curricula, designed to help students excel in their professional careers."
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="International Programs" />
+            android:text="International Programs"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="The Baltic University is continuously developing and implementing joint academic and research programs with universities abroad welcoming foreign students and faculty." />
+            android:layout_marginBottom="10dp"
+            android:text="The Baltic University is continuously developing and implementing joint academic and research programs with universities abroad welcoming foreign students and faculty."
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"/>
 
     </LinearLayout>
 </ScrollView>
