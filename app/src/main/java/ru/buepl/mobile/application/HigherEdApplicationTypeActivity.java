@@ -1,15 +1,20 @@
 package ru.buepl.mobile.application;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 
 public class HigherEdApplicationTypeActivity extends AppCompatActivity
         implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+
+    String programBeginsAt;
+    Button nextButton;
 
 
     @Override
@@ -45,11 +50,21 @@ public class HigherEdApplicationTypeActivity extends AppCompatActivity
         ArrayAdapter<String> choice3Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, choices);
         programDropdown_c3.setAdapter(choice3Adapter);
 
+        nextButton = (Button)findViewById(R.id.higher_ed_app_type_next_button);
+        nextButton.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
 
+        switch (v.getId()){
+            case R.id.higher_ed_app_type_next_button:
+
+                Intent academicInformationIntent = new Intent(this, AcademicInformationActivity.class);
+                startActivity(academicInformationIntent);
+                break;
+        }
     }
 
     @Override
@@ -60,5 +75,31 @@ public class HigherEdApplicationTypeActivity extends AppCompatActivity
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+    public void onRadioButtonClicked(View view){
+        //button checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        //which button checked?
+        switch (view.getId()){
+
+            case R.id.evening:
+                if(checked){
+                    programBeginsAt = "Evening";
+                }
+                break;
+
+            case R.id.day:
+                if(checked){
+                    programBeginsAt = "Day";
+                }
+                break;
+
+            case R.id.correspondence:
+                if(checked){
+                    programBeginsAt = "Correspondence";
+                }
+                break;
+        }
     }
 }

@@ -209,9 +209,11 @@
             android:layout_below="@+id/textForeignLanguage"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="21dp"
-            android:background="#750825"
+            android:background="#6B0F1B"
             android:padding="10dp"
             android:text="NEXT"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
             android:textColor="@android:color/white" />
 
     </RelativeLayout>

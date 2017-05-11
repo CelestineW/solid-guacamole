@@ -25,11 +25,13 @@ public class ProDevApplicationTypeActivity extends AppCompatActivity
         nextButton.setOnClickListener(this);
 
         Spinner appDropdown = (Spinner)findViewById(R.id.application_spinner);
-        String[] appItems = new String[] {"select one", "program 1", "program 2", "program 3"};
+        appDropdown.setPrompt("Select One");
+        String[] appItems = new String[] {"Select One", "Program 1", "Program 2", "Program 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, appItems);
         appDropdown.setAdapter(adapter);
 
         Spinner levelDropdown = (Spinner)findViewById(R.id.level_spinner);
+        levelDropdown.setPrompt("Select One");
         String[] levelItems = new String[] {"Select One", "Level A (Beginner)", "Level B (Intermediate)", "Level C (Advance)"};
         ArrayAdapter<String> levelAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, levelItems);
         levelDropdown.setAdapter(levelAdapter);

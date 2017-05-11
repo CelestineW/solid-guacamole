@@ -41,7 +41,8 @@ public class ProDevEducationActivity extends AppCompatActivity
         editTextForeignLanguage = (EditText)findViewById(R.id.textForeignLanguage);
 
         Spinner appDropdown = (Spinner)findViewById(R.id.pro_dev_edu_spinner);
-        String[] appItems = new String[] {"select one", "education 1", "education 2", "education 3"};
+        appDropdown.setPrompt("Select One");
+        String[] appItems = new String[] {"Select One", "Education 1", "Education 2", "Education 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, appItems);
         appDropdown.setAdapter(adapter);
     }

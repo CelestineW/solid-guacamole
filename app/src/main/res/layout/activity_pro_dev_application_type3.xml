@@ -43,9 +43,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NEXT"
+            android:textSize="20sp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="72dp" />
+            android:layout_marginBottom="72dp"
+            android:background="#6B0F1B"
+            android:textColor="@android:color/white"/>
 
         <Spinner
             android:id="@+id/application_spinner"
@@ -61,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="7dp"
             android:layout_marginStart="7dp"
+            android:layout_marginRight="10dp"
             android:layout_below="@+id/textView27"
             android:layout_toRightOf="@+id/pro_dev_button"
             android:layout_toEndOf="@+id/pro_dev_button"

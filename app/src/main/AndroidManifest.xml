@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.buepl.mobile.application">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/baltic_logo"
@@ -32,7 +31,8 @@
         <activity android:name=".AcademicInformationActivity"></activity>
         <activity android:name=".ProDevEducationActivity" />
         <activity android:name=".ProDevSubmitActivity" />
-        <activity android:name=".ProDevThankyouActivity"></activity>
+        <activity android:name=".ProDevThankyouActivity" />
+        <activity android:name=".TranscriptActivity"></activity>
     </application>
 
 </manifest>
