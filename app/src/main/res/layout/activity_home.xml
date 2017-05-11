@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="ru.buepl.mobile.application.LoginActivity">
+    tools:context="ru.buepl.mobile.application.HomeActivity">
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/home_login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -25,13 +25,13 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/home_create_account_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="43dp"
         android:text="Create An Account"
         android:textSize="20sp"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/home_login_button"
         android:layout_centerHorizontal="true"
 
         android:layout_weight="1"
@@ -39,14 +39,14 @@
         android:textColor="@android:color/white"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/home_tour_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="42dp"
         android:text="Take a Tour"
         android:textSize="20sp"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/home_create_account_button"
         android:layout_centerHorizontal="true"
 
         android:layout_weight="1"

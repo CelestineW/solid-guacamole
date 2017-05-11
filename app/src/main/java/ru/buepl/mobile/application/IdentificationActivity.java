@@ -31,12 +31,12 @@ public class IdentificationActivity extends LoggedInActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_identification);
 
-        editTextDateOfBirth = (EditText) findViewById(R.id.editText8);
-        editTextPlaceOfBirth = (EditText) findViewById(R.id.editText10);
-        editTextCitizenship = (EditText) findViewById(R.id.editText11);
-        radioGroupGender = (RadioGroup) findViewById(R.id.radioGroup);
+        editTextDateOfBirth = (EditText) findViewById(R.id.identification_date_of_birth);
+        editTextPlaceOfBirth = (EditText) findViewById(R.id.identification_place_of_birth);
+        editTextCitizenship = (EditText) findViewById(R.id.identification_citizenship);
+        radioGroupGender = (RadioGroup) findViewById(R.id.identification_radio_group_gender);
 
-        nextButton = (Button) findViewById(R.id.button7);
+        nextButton = (Button) findViewById(R.id.identification_next_button);
         nextButton.setOnClickListener(this);
 
         // Load application data
@@ -58,7 +58,7 @@ public class IdentificationActivity extends LoggedInActivity implements View.OnC
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.button7:
+            case R.id.identification_next_button:
                 saveApplicationData(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

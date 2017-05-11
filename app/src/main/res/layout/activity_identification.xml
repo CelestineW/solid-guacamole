@@ -18,7 +18,7 @@
         android:textSize="9pt" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/identification_date_of_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -33,12 +33,12 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText8"
+        android:layout_below="@+id/identification_date_of_birth"
         android:layout_centerHorizontal="true"
         android:text="Date of Birth" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/identification_place_of_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -46,14 +46,14 @@
         android:gravity="center"
 
         android:layout_below="@+id/textView16"
-        android:layout_alignLeft="@+id/editText8"
-        android:layout_alignStart="@+id/editText8" />
+        android:layout_alignLeft="@+id/identification_date_of_birth"
+        android:layout_alignStart="@+id/identification_date_of_birth" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText10"
+        android:layout_below="@+id/identification_place_of_birth"
         android:layout_centerHorizontal="true"
         android:text="Place of Birth" />
 
@@ -62,14 +62,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView17"
         android:layout_centerHorizontal="true"
-        android:id="@+id/radioGroup">
+        android:id="@+id/identification_radio_group_gender">
 
         <RadioButton
             android:id="@+id/radio_gender_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editText10"
-            android:layout_alignStart="@+id/editText10"
+            android:layout_alignLeft="@+id/identification_place_of_birth"
+            android:layout_alignStart="@+id/identification_place_of_birth"
             android:layout_below="@+id/textView17"
             android:layout_marginTop="37dp"
             android:text="Female" />
@@ -85,12 +85,12 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/identification_citizenship"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText10"
-        android:layout_alignStart="@+id/editText10"
-        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/identification_place_of_birth"
+        android:layout_alignStart="@+id/identification_place_of_birth"
+        android:layout_below="@+id/identification_radio_group_gender"
         android:gravity="center"
 
         android:layout_marginTop="14dp"
@@ -101,12 +101,12 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText11"
+        android:layout_below="@+id/identification_citizenship"
         android:layout_centerHorizontal="true"
         android:text="Citizenship" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/identification_next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView18"

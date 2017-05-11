@@ -30,7 +30,7 @@
         android:layout_marginTop="12dp" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/personal_info_home_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -43,17 +43,17 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText7"
+        android:layout_below="@+id/personal_info_home_phone"
         android:layout_centerHorizontal="true"
         android:text="Home Phone Number" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/personal_info_cell_phone"
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText7"
-        android:layout_alignStart="@+id/editText7"
+        android:layout_alignLeft="@+id/personal_info_home_phone"
+        android:layout_alignStart="@+id/personal_info_home_phone"
         android:layout_below="@+id/textView20"
         android:ems="10"
         android:inputType="phone" />
@@ -62,35 +62,35 @@
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText9"
+        android:layout_below="@+id/personal_info_cell_phone"
         android:layout_centerHorizontal="true"
         android:text="Cell Phone Number" />
 
     <EditText
-        android:id="@+id/editText12"
+        android:id="@+id/passport_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
         android:gravity="center"
         android:layout_below="@+id/textView22"
-        android:layout_alignLeft="@+id/editText9"
-        android:layout_alignStart="@+id/editText9" />
+        android:layout_alignLeft="@+id/personal_info_cell_phone"
+        android:layout_alignStart="@+id/personal_info_cell_phone" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText12"
+        android:layout_below="@+id/passport_number"
         android:layout_centerHorizontal="true"
         android:text="Passport No." />
 
     <EditText
-        android:id="@+id/editText14"
+        android:id="@+id/passport_issue_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText12"
-        android:layout_alignRight="@+id/editText12"
+        android:layout_alignEnd="@+id/passport_number"
+        android:layout_alignRight="@+id/passport_number"
         android:layout_below="@+id/textView23"
         android:gravity="center"
         android:ems="10"
@@ -100,16 +100,16 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText14"
+        android:layout_below="@+id/passport_issue_date"
         android:layout_centerHorizontal="true"
         android:text="Issue Date" />
 
     <EditText
-        android:id="@+id/editText23"
+        android:id="@+id/passport_issued_by"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText14"
-        android:layout_alignStart="@+id/editText14"
+        android:layout_alignLeft="@+id/passport_issue_date"
+        android:layout_alignStart="@+id/passport_issue_date"
         android:gravity="center"
         android:layout_below="@+id/textView24"
         android:ems="10"
@@ -120,11 +120,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Issued By"
-        android:layout_below="@+id/editText23"
+        android:layout_below="@+id/passport_issued_by"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/personal_info_next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView26"

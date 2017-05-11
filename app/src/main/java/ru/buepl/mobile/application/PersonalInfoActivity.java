@@ -32,13 +32,13 @@ public class PersonalInfoActivity extends LoggedInActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_info);
 
-        editTextHomePhoneNumber = (EditText) findViewById(R.id.editText7);
-        editTextCellPhoneNumber = (EditText) findViewById(R.id.editText9);
-        editTextPassportNumber = (EditText) findViewById(R.id.editText12);
-        editTextIssueDate = (EditText) findViewById(R.id.editText14);
-        editTextIssuedBy = (EditText) findViewById(R.id.editText23);
+        editTextHomePhoneNumber = (EditText) findViewById(R.id.personal_info_home_phone);
+        editTextCellPhoneNumber = (EditText) findViewById(R.id.personal_info_cell_phone);
+        editTextPassportNumber = (EditText) findViewById(R.id.passport_number);
+        editTextIssueDate = (EditText) findViewById(R.id.passport_issue_date);
+        editTextIssuedBy = (EditText) findViewById(R.id.passport_issued_by);
 
-        nextButton = (Button) findViewById(R.id.button8);
+        nextButton = (Button) findViewById(R.id.personal_info_next_button);
         nextButton.setOnClickListener(this);
 
         // Load application data
@@ -58,7 +58,7 @@ public class PersonalInfoActivity extends LoggedInActivity implements View.OnCli
     public void onClick(View v) {
         switch (v.getId()) {
 
-            case R.id.button8:
+            case R.id.personal_info_next_button:
                 saveApplicationData(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

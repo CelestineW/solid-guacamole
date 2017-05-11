@@ -34,7 +34,6 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     EditText editTextPhoneNumber;
 
     EditText editTextEmail;
-    EditText editTextUsername;
     EditText editTextPassword;
     EditText editTextRetypePassword;
 
@@ -43,21 +42,20 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
-        editTextFirstName = (EditText) findViewById(R.id.editText13);
-        editTextMI = (EditText) findViewById(R.id.editText15);
-        editTextLastName = (EditText) findViewById(R.id.editText16);
-        editTextStreetAddress = (EditText) findViewById(R.id.editText17);
-        editTextCity = (EditText) findViewById(R.id.editText18);
-        editTextZipCode = (EditText) findViewById(R.id.editText19);
-        editTextCountry = (EditText) findViewById(R.id.editText20);
-        editTextPhoneNumber = (EditText) findViewById(R.id.editText21);
+        editTextFirstName = (EditText) findViewById(R.id.create_account_first_name);
+        editTextMI = (EditText) findViewById(R.id.create_account_middle_initial);
+        editTextLastName = (EditText) findViewById(R.id.create_account_last_name);
+        editTextStreetAddress = (EditText) findViewById(R.id.create_account_street_address);
+        editTextCity = (EditText) findViewById(R.id.create_account_city);
+        editTextZipCode = (EditText) findViewById(R.id.create_account_zip_code);
+        editTextCountry = (EditText) findViewById(R.id.create_account_counrty);
+        editTextPhoneNumber = (EditText) findViewById(R.id.create_account_phone_number);
 
-        editTextEmail = (EditText) findViewById(R.id.editText5);
-        editTextUsername = (EditText) findViewById(R.id.editText3);
-        editTextPassword = (EditText) findViewById(R.id.editText4);
-        editTextRetypePassword = (EditText) findViewById(R.id.editText6);
+        editTextEmail = (EditText) findViewById(R.id.create_account_email);
+        editTextPassword = (EditText) findViewById(R.id.create_account_password);
+        editTextRetypePassword = (EditText) findViewById(R.id.create_account_retype_password);
 
-        submitButton = (Button) findViewById(R.id.button6);
+        submitButton = (Button) findViewById(R.id.create_account_button);
         submitButton.setOnClickListener(this);
     }
 
@@ -66,7 +64,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
         switch (v.getId()) {
 
-            case R.id.button6:
+            case R.id.create_account_button:
 
                 String firstNameTxt = editTextFirstName.getText().toString().trim();
                 String MITxt = editTextMI.getText().toString().trim();

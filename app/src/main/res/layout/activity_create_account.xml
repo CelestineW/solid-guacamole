@@ -36,14 +36,14 @@
                 android:paddingTop="10dp">
 
                 <EditText
-                    android:id="@+id/editText16"
+                    android:id="@+id/create_account_last_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:paddingRight="25dp" />
 
                 <EditText
-                    android:id="@+id/editText13"
+                    android:id="@+id/create_account_first_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
@@ -54,7 +54,7 @@
                 <FrameLayout android:layout_width="wrap_content">
 
                     <EditText
-                        android:id="@+id/editText15"
+                        android:id="@+id/create_account_middle_initial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="2"
@@ -74,9 +74,9 @@
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText16"
-                    android:layout_alignStart="@+id/editText16"
-                    android:layout_below="@+id/editText16"
+                    android:layout_alignLeft="@+id/create_account_last_name"
+                    android:layout_alignStart="@+id/create_account_last_name"
+                    android:layout_below="@+id/create_account_last_name"
 
                     android:text="Last Name" />
 
@@ -84,9 +84,9 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@id/editText13"
-                    android:layout_alignStart="@id/editText13"
-                    android:layout_below="@+id/editText13"
+                    android:layout_alignLeft="@id/create_account_first_name"
+                    android:layout_alignStart="@id/create_account_first_name"
+                    android:layout_below="@+id/create_account_first_name"
 
                     android:text="First Name" />
 
@@ -94,9 +94,9 @@
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText15"
-                    android:layout_alignStart="@+id/editText15"
-                    android:layout_below="@+id/editText15"
+                    android:layout_alignLeft="@+id/create_account_middle_initial"
+                    android:layout_alignStart="@+id/create_account_middle_initial"
+                    android:layout_below="@+id/create_account_middle_initial"
 
                     android:text="MI" />
 
@@ -110,7 +110,7 @@
                 android:shrinkColumns="*">
 
                 <EditText
-                    android:id="@+id/editText17"
+                    android:id="@+id/create_account_street_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
@@ -118,7 +118,7 @@
                     android:paddingRight="25dp" />
 
                 <EditText
-                    android:id="@+id/editText18"
+                    android:id="@+id/create_account_city"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
@@ -127,7 +127,7 @@
 
                 <FrameLayout android:layout_width="wrap_content">
                     <EditText
-                        android:id="@+id/editText19"
+                        android:id="@+id/create_account_zip_code"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="6"
@@ -144,9 +144,9 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText17"
-                    android:layout_alignStart="@+id/editText17"
-                    android:layout_below="@+id/editText17"
+                    android:layout_alignLeft="@+id/create_account_street_address"
+                    android:layout_alignStart="@+id/create_account_street_address"
+                    android:layout_below="@+id/create_account_street_address"
                     android:text="Street Address" />
 
 
@@ -154,9 +154,9 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText18"
-                    android:layout_alignStart="@+id/editText18"
-                    android:layout_below="@+id/editText18"
+                    android:layout_alignLeft="@+id/create_account_city"
+                    android:layout_alignStart="@+id/create_account_city"
+                    android:layout_below="@+id/create_account_city"
                     android:text="City" />
 
 
@@ -164,9 +164,9 @@
                     android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText19"
-                    android:layout_alignStart="@+id/editText19"
-                    android:layout_below="@+id/editText19"
+                    android:layout_alignLeft="@+id/create_account_zip_code"
+                    android:layout_alignStart="@+id/create_account_zip_code"
+                    android:layout_below="@+id/create_account_zip_code"
                     android:text="Zip Code" />
             </TableRow>
 
@@ -175,7 +175,7 @@
                 android:paddingTop="10dp">
 
                 <EditText
-                    android:id="@+id/editText20"
+                    android:id="@+id/create_account_counrty"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -184,11 +184,11 @@
                     android:paddingRight="25dp" />
 
                 <EditText
-                    android:id="@+id/editText21"
+                    android:id="@+id/create_account_phone_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="phone"
                     android:paddingLeft="25dp"
                     android:paddingRight="25dp" />
             </TableRow>
@@ -199,9 +199,9 @@
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText20"
-                    android:layout_alignStart="@+id/editText20"
-                    android:layout_below="@+id/editText20"
+                    android:layout_alignLeft="@+id/create_account_counrty"
+                    android:layout_alignStart="@+id/create_account_counrty"
+                    android:layout_below="@+id/create_account_counrty"
                     android:text="Country" />
 
 
@@ -209,9 +209,9 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText21"
-                    android:layout_alignStart="@+id/editText21"
-                    android:layout_below="@+id/editText21"
+                    android:layout_alignLeft="@+id/create_account_phone_number"
+                    android:layout_alignStart="@+id/create_account_phone_number"
+                    android:layout_below="@+id/create_account_phone_number"
                     android:text="Phone Number" />
 
             </TableRow>
@@ -221,11 +221,11 @@
                 android:paddingTop="10dp">
 
                 <EditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/create_account_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="textEmailAddress"
                     android:paddingLeft="25dp"
                     android:paddingRight="25dp" />
 
@@ -237,9 +237,9 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText5"
-                    android:layout_alignStart="@+id/editText5"
-                    android:layout_below="@+id/editText5"
+                    android:layout_alignLeft="@+id/create_account_email"
+                    android:layout_alignStart="@+id/create_account_email"
+                    android:layout_below="@+id/create_account_email"
                     android:text="Email" />
 
             </TableRow>
@@ -249,37 +249,7 @@
                 android:paddingTop="10dp">
 
                 <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
-
-
-            </TableRow>
-
-            <TableRow android:paddingLeft="10dp">
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText3"
-                    android:layout_alignStart="@+id/editText3"
-                    android:layout_below="@+id/editText3"
-                    android:text="Username" />
-
-
-            </TableRow>
-
-            <TableRow
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp">
-
-                <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/create_account_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -288,7 +258,7 @@
                     android:paddingRight="25dp" />
 
                 <EditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/create_account_retype_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -304,9 +274,9 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText4"
-                    android:layout_alignStart="@+id/editText4"
-                    android:layout_below="@+id/editText4"
+                    android:layout_alignLeft="@+id/create_account_password"
+                    android:layout_alignStart="@+id/create_account_password"
+                    android:layout_below="@+id/create_account_password"
                     android:text="Password" />
 
 
@@ -314,9 +284,9 @@
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/editText6"
-                    android:layout_alignStart="@+id/editText6"
-                    android:layout_below="@+id/editText6"
+                    android:layout_alignLeft="@+id/create_account_retype_password"
+                    android:layout_alignStart="@+id/create_account_retype_password"
+                    android:layout_below="@+id/create_account_retype_password"
                     android:text="Re-type Password" />
             </TableRow>
 
@@ -325,7 +295,7 @@
 
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/create_account_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView15"
