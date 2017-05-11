@@ -38,14 +38,31 @@ abstract class LoggedInActivity extends AppCompatActivity {
      * @return true if there is data to save (and the callback will be invoked);
      * false otherwise.
      */
-    protected final boolean saveApplicationData(@Nullable OnCompleteListener<Void> listener) {
+    protected final boolean saveApplicationData(@Nullable final OnCompleteListener<Void> listener) {
         Application application = collectApplicationDataToSave();
         if (application != null) {
-            FirebaseHelper.getInstance().saveApplicationForCurrentUser(application, listener);
+            FirebaseHelper.getInstance().saveApplicationForCurrentUser(application, new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (!task.isSuccessful()) {
+                        Toast.makeText(LoggedInActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                    }
+
+                    if (listener != null) {
+                        listener.onComplete(task);
+                    }
+                }
+            });
             return true;
         } else {
             return false;
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        saveApplicationData(null);
     }
 
     @Override
@@ -62,8 +79,6 @@ abstract class LoggedInActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
                                     doLogout();
-                                } else {
-                                    Toast.makeText(LoggedInActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                 }
                             }
                         };
