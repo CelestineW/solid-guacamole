@@ -19,17 +19,17 @@ import static ru.buepl.mobile.application.data.validation.Validation.*;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder(builderClassName = "Builder")
 public final class AccountInfo implements Validatable {
-    private String firstName = "";
-    private String middleName = "";
-    private String lastName = "";
+    private String firstName;
+    private String middleInitial;
+    private String lastName;
 
-    private String address = "";
-    private String city = "";
-    private String zipCode = "";
-    private String country = "";
-    private String phone = "";
+    private String address;
+    private String city;
+    private String zipCode;
+    private String country;
+    private String phone;
 
-    private String email = "";
+    private String email;
 
     /**
      * For serialization purposes

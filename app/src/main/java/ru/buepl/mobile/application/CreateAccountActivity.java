@@ -81,7 +81,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
                 AccountInfo accountInfo = AccountInfo.builder()
                         .firstName(firstNameTxt)
-                        .middleName(MITxt)
+                        .middleInitial(MITxt)
                         .lastName(lastNameTxt)
                         .address(streetAddressTxt)
                         .city(cityTxt)
