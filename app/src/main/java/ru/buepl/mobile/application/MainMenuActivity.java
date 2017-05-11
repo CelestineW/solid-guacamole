@@ -36,10 +36,8 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
 
             case R.id.main_menu_academic_programs:
 
-                /*
-                Intent academicPrograms = new Intent(this, AcademicActivity.class);
+                Intent academicPrograms = new Intent(this, AcademicProgramsActivity.class);
                 startActivity(academicPrograms);
-                */
 
                 break;
             case R.id.main_menu_application:
