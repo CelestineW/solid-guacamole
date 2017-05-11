@@ -1,170 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.buepl.mobile.application.AcademicInformationActivity">
+    android:fillViewport="true">
 
-    <TableLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:paddingTop="40dp">
+        android:paddingLeft="15dp"
+        tools:context="ru.buepl.mobile.application.AcademicInformationActivity">
 
-        <TableRow
-            android:paddingBottom="50dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="30dp"
-            android:gravity="center">
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="58dp"
+            android:text="Current Education Level"
+            android:textColor="#95989A" />
 
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Current Education Level" />
-
-            <Spinner
-                android:paddingLeft="5dp"
-                android:id="@+id/current_edu_level"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-
-        <TableRow
-            android:paddingBottom="50dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="30dp"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Supporting Documentation" />
-
-            <Spinner
-                android:paddingLeft="5dp"
-                android:id="@+id/edu_documentation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        <Spinner
+            android:id="@+id/current_edu_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView31"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@+id/textView31"
+            android:layout_toRightOf="@+id/textView31"
+            android:paddingLeft="5dp" />
 
 
-        <TableRow
-            android:gravity="center">
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView31"
 
-            <GridLayout
-                android:columnCount="2"
-                android:rowCount="7">
+            android:layout_alignStart="@+id/textView31"
+            android:layout_below="@+id/current_edu_level"
+            android:layout_marginTop="48dp"
+            android:text="Supporting Documentation"
+            android:textColor="#95989A" />
 
-                <Space
-                    android:layout_width="70dp"
-                    android:layout_height="10dp"/>
+        <Spinner
+            android:id="@+id/edu_documentation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView32"
 
-
-                <EditText
-                    android:id="@+id/editText22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Document No." />
-
-                <Space
-                    android:layout_width="1dp"
-                    android:layout_height="30dp"/>
-
-                <EditText
-                    android:id="@+id/editText22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Document No." />
+            android:layout_alignLeft="@+id/current_edu_level"
+            android:layout_alignStart="@+id/current_edu_level"
+            android:paddingLeft="5dp"
+            android:textColor="#95989A" />
 
 
-                <Space
-                    android:layout_width="1dp"
-                    android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView32"
+            android:layout_marginTop="52dp"
+            android:layout_toLeftOf="@+id/current_edu_level"
 
-                <EditText
-                    android:id="@+id/editText22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Document No." />
-
-
-                <Space
-                    android:layout_width="1dp"
-                    android:layout_height="30dp"/>
+            android:layout_toStartOf="@+id/current_edu_level"
+            android:text="Document No."
+            android:textColor="#95989A" />
 
 
-                <EditText
-                    android:id="@+id/editText22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Document No." />
+        <EditText
+            android:id="@+id/higher_ed_textDocumentNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView33"
+            android:layout_alignStart="@+id/textView33"
+            android:layout_below="@+id/textView33"
+            android:ems="10"
 
-                <Space
-                    android:layout_width="1dp"
-                    android:layout_height="30dp"/>
-
-                <EditText
-                    android:id="@+id/editText22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Document No." />
+            android:inputType="number" />
 
 
-                <Space
-                    android:layout_width="1dp"
-                    android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/higher_ed_textDocumentNo"
+            android:layout_alignStart="@+id/higher_ed_textDocumentNo"
+            android:layout_below="@+id/higher_ed_textDocumentNo"
+            android:text="Issue Date"
 
-                <EditText
-                    android:id="@+id/editText22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Document No." />
+            android:textColor="#95989A" />
 
-                <Space
-                    android:layout_width="1dp"
-                    android:layout_height="30dp"/>
+        <EditText
+            android:id="@+id/higher_ed_textIssueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView34"
+            android:layout_alignStart="@+id/textView34"
+            android:layout_below="@+id/textView34"
+            android:ems="10"
+            android:inputType="date" />
 
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/higher_ed_textIssueDate"
+            android:layout_alignStart="@+id/higher_ed_textIssueDate"
+            android:layout_below="@+id/higher_ed_textIssueDate"
+            android:text="Registration No."
 
-                <EditText
-                    android:id="@+id/editText22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Document No." />
-
-
-
-
-            </GridLayout>
-
-
-        </TableRow>
-
-        <TableRow
-            android:gravity="center">
+            android:textColor="#95989A" />
 
 
+        <EditText
+            android:id="@+id/higher_ed_textRegistrationNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView35"
+            android:layout_alignStart="@+id/textView35"
+            android:layout_below="@+id/textView35"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
-        </TableRow>
 
-    </TableLayout>
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/higher_ed_textRegistrationNo"
+            android:layout_alignStart="@+id/higher_ed_textRegistrationNo"
+            android:layout_below="@+id/higher_ed_textRegistrationNo"
+            android:text="Qualification"
+
+            android:textColor="#95989A" />
+
+
+        <EditText
+            android:id="@+id/higher_ed_textQualification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView36"
+            android:layout_alignStart="@+id/textView36"
+            android:layout_below="@+id/textView36"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/higher_ed_textQualification"
+            android:layout_alignStart="@+id/higher_ed_textQualification"
+            android:layout_below="@+id/higher_ed_textQualification"
+            android:text="Specialization"
+
+            android:textColor="#95989A" />
+
+        <EditText
+            android:id="@+id/higher_ed_textSpecification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView37"
+            android:layout_alignStart="@+id/textView37"
+            android:layout_below="@+id/textView37"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/higher_ed_textSpecification"
+            android:layout_alignStart="@+id/higher_ed_textSpecification"
+
+            android:layout_below="@+id/higher_ed_textSpecification"
+            android:text="Issued By"
+            android:textColor="#95989A" />
+
+
+        <EditText
+            android:id="@+id/editText22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView39"
+            android:layout_alignStart="@+id/textView39"
+            android:layout_below="@+id/textView39"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView32"
+            android:layout_alignStart="@+id/textView32"
+
+            android:layout_below="@+id/editText22"
+            android:layout_marginTop="14dp"
+            android:text="Foreign Language"
+            android:textColor="#95989A" />
+
+
+        <EditText
+            android:id="@+id/higher_ed_textForeignLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView40"
+            android:layout_alignStart="@+id/textView40"
+            android:layout_below="@+id/textView40"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/academic_info_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/higher_ed_textForeignLanguage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/white"
+            android:background="#6B0F1B"
+            android:text="Next" />
+
+
+    </RelativeLayout>
 
 
 </ScrollView>
