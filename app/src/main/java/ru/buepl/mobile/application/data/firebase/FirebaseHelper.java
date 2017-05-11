@@ -42,8 +42,9 @@ public enum FirebaseHelper {
     private final FirebaseAuth auth = FirebaseAuth.getInstance();
     private final DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
 
-    private volatile Application currentApplication = null;
-    private volatile AccountInfo currentAccountInfo = null;
+    private final Object lock = new Object();
+    private Application currentApplication = null;
+    private AccountInfo currentAccountInfo = null;
 
     /**
      * Returns {@code true} if a user is logged in; {@code false} otherwise.
@@ -151,7 +152,7 @@ public enum FirebaseHelper {
                             Log.wtf("null account info", "should not happen!!"); // TODO: 5/9/17 crash?
                             accountInfo = AccountInfo.builder().build();
                         }
-                        currentAccountInfo = accountInfo;
+                        setAccountInfo(accountInfo);
 
                         // Read application
                         Application application = dataSnapshot
@@ -160,7 +161,7 @@ public enum FirebaseHelper {
                         if (application == null) {
                             application = Application.empty();
                         }
-                        currentApplication = application;
+                        setApplication(application);
 
                         if (onComplete != null) {
                             onComplete.onUpdate(accountInfo, application);
@@ -182,7 +183,15 @@ public enum FirebaseHelper {
      */
     public Application getApplication() throws IllegalStateException {
         getLoggedInUser(); // Assert that logged in
-        return currentApplication;
+        synchronized (lock) {
+            return currentApplication;
+        }
+    }
+
+    private void setApplication(Application application) {
+        synchronized (lock) {
+            currentApplication = application;
+        }
     }
 
     /**
@@ -193,7 +202,15 @@ public enum FirebaseHelper {
      */
     public AccountInfo getAccountInfo() throws IllegalStateException {
         getLoggedInUser(); // Assert that logged in
-        return currentAccountInfo;
+        synchronized (lock) {
+            return currentAccountInfo;
+        }
+    }
+
+    private void setAccountInfo(AccountInfo accountInfo) {
+        synchronized (lock) {
+            currentAccountInfo = accountInfo;
+        }
     }
 
     /**
@@ -217,6 +234,8 @@ public enum FirebaseHelper {
     public void saveAccountInfoForCurrentUser(@NonNull AccountInfo accountInfo,
                                               @Nullable final OnCompleteListener<Void> listener)
             throws IllegalStateException {
+        setAccountInfo(accountInfo);
+
         dbReferenceForCurrentUser()
                 .child(ACCOUNT_INFO_CHILD).setValue(accountInfo)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -254,7 +273,7 @@ public enum FirebaseHelper {
     public void saveApplicationForCurrentUser(@NonNull Application application,
                                               @Nullable final OnCompleteListener<Void> listener)
             throws IllegalStateException {
-        currentApplication = application;
+        setApplication(application);
 
         dbReferenceForCurrentUser()
                 .child(APPLICATION_CHILD)
