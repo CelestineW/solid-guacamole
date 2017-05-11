@@ -130,7 +130,7 @@
         android:layout_below="@+id/textView26"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="#750825"
+        android:background="#6B0F1B"
         android:textColor="@android:color/white"
         android:padding="5dp"
         android:text="Next: Additional Identification" />

@@ -14,12 +14,14 @@
         android:paddingTop="40dp">
 
 
-
         <TableRow
-            android:paddingBottom="50dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="30dp"
-            android:gravity="center">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="0dp"
+            android:paddingTop="30dp">
 
             <TextView
                 android:id="@+id/textView28"
@@ -29,20 +31,17 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:text="Application for: "
-                tools:layout_editor_absoluteX="0dp"
-                android:gravity="center"
-                tools:layout_editor_absoluteY="81dp" />
+                android:paddingLeft="50dp" />
 
             <Spinner
                 android:id="@+id/higher_ed_application_spinner"
-                android:paddingLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/textView28"
                 android:layout_toEndOf="@+id/textView28"
                 android:layout_toRightOf="@+id/textView28"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="81dp" />
+                android:layout_marginRight="70dp"
+                />
 
         </TableRow>
 
@@ -149,6 +148,21 @@
 
         </TableRow>
 
+        <TableRow
+            android:gravity="center">
+
+        <Button
+            android:id="@+id/higher_ed_app_type_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#6B0F1B"
+            android:padding="10dp"
+            android:text="NEXT"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+</TableRow>
 
     </TableLayout>
 
