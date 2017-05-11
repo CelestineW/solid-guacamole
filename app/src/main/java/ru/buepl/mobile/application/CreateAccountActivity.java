@@ -66,29 +66,20 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
             case R.id.create_account_button:
 
-                String firstNameTxt = editTextFirstName.getText().toString().trim();
-                String MITxt = editTextMI.getText().toString().trim();
-                String lastNameTxt = editTextLastName.getText().toString().trim();
-                String streetAddressTxt = editTextStreetAddress.getText().toString().trim();
-                String cityTxt = editTextCity.getText().toString().trim();
-                String zipCodeTxt = editTextZipCode.getText().toString().trim();
-                String countryTxt = editTextCountry.getText().toString().trim();
-                String phoneNumber = editTextPhoneNumber.getText().toString().trim();
-
                 String emailTxt = editTextEmail.getText().toString().trim();
                 String passwordTxt = editTextPassword.getText().toString();
                 String retypePasswordTxt = editTextRetypePassword.getText().toString();
 
                 AccountInfo accountInfo = AccountInfo.builder()
-                        .firstName(firstNameTxt)
-                        .middleInitial(MITxt)
-                        .lastName(lastNameTxt)
-                        .address(streetAddressTxt)
-                        .city(cityTxt)
-                        .zipCode(zipCodeTxt)
-                        .country(countryTxt)
+                        .firstName(editTextFirstName.getText().toString().trim())
+                        .middleInitial(editTextMI.getText().toString().trim())
+                        .lastName(editTextLastName.getText().toString().trim())
+                        .address(editTextStreetAddress.getText().toString().trim())
+                        .city(editTextCity.getText().toString().trim())
+                        .zipCode(editTextZipCode.getText().toString().trim())
+                        .country(editTextCountry.getText().toString().trim())
+                        .phone(editTextPhoneNumber.getText().toString().trim())
                         .email(emailTxt)
-                        .phone(phoneNumber)
                         .build();
 
                 if (Validation.validateAndToastFirstError(accountInfo, this)) {
