@@ -30,7 +30,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/allow"
+                android:id="@+id/higherEducation"
                 android:layout_width="0.0dip"
                 android:layout_height="160dp"
                 android:layout_weight="1.0"
@@ -42,7 +42,7 @@
                  />
 
             <Button
-                android:id="@+id/deny"
+                android:id="@+id/professional"
                 android:layout_width="0.0dip"
                 android:layout_height="160dp"
                 android:layout_weight="1.0"

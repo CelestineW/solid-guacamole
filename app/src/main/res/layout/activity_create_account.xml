@@ -114,16 +114,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                    />
 
                 <EditText
                     android:id="@+id/create_account_city"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                    />
 
                 <FrameLayout android:layout_width="wrap_content">
                     <EditText
@@ -132,8 +130,7 @@
                         android:layout_height="wrap_content"
                         android:ems="6"
                         android:inputType="textPersonName|number"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                     />
                 </FrameLayout>
             </TableRow>
 
@@ -180,8 +177,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                  />
 
                 <EditText
                     android:id="@+id/create_account_phone_number"
@@ -254,8 +250,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPassword"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                 />
 
                 <EditText
                     android:id="@+id/create_account_retype_password"
@@ -263,8 +258,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPassword"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp" />
+                 />
 
             </TableRow>
 
