@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.Task;
 
 import ru.buepl.mobile.application.data.Application;
 import ru.buepl.mobile.application.data.firebase.FirebaseHelper;
+import ru.buepl.mobile.application.util.Toaster;
 
 
 abstract class LoggedInActivity extends AppCompatActivity {
@@ -53,7 +54,7 @@ abstract class LoggedInActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (!task.isSuccessful()) {
-                        Toast.makeText(LoggedInActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        Toaster.toastException(LoggedInActivity.this, task.getException());
                     }
 
                     if (listener != null) {
