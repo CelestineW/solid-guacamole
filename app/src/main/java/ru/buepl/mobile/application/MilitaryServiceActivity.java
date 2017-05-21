@@ -41,8 +41,8 @@ public class MilitaryServiceActivity extends AppCompatActivity implements View.O
                 String issueFromTxt = editTextIssueFrom.getText().toString();
                 String militaryServiceTxt = militaryServiceEligibility;
 
-                Intent main = new Intent(this, MainMenuActivity.class);
-                startActivity(main);
+                Intent StPetersburgAddressIntent = new Intent(this, StPetersburgAddressActivity.class);
+                startActivity(StPetersburgAddressIntent);
 
                 break;
         }

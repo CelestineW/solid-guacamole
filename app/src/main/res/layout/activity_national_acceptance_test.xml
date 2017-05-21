@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="ru.buepl.mobile.application.NationalAcceptanceTestActivity">
+
+        <TextView
+            android:id="@+id/textView66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="Results of National Acceptance Test:" />
+
+        <TextView
+            android:id="@+id/textView67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView66"
+            android:layout_alignStart="@+id/textView66"
+            android:layout_below="@+id/textView66"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:text="Test date:" />
+
+        <EditText
+            android:id="@+id/national_test_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView67"
+            android:layout_alignStart="@+id/textView67"
+            android:layout_below="@+id/textView67"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView68"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_date"
+            android:layout_alignStart="@+id/national_test_date"
+            android:layout_below="@+id/national_test_date"
+            android:layout_marginTop="8dp"
+            android:text="Test location:" />
+
+        <EditText
+            android:id="@+id/national_test_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView68"
+            android:layout_alignStart="@+id/textView68"
+            android:layout_below="@+id/textView68"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView69"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_location"
+            android:layout_alignStart="@+id/national_test_location"
+            android:layout_below="@+id/national_test_location"
+            android:layout_marginTop="8dp"
+            android:text="Test results:" />
+
+        <TextView
+            android:id="@+id/textView70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView69"
+            android:layout_alignRight="@+id/textView69"
+            android:layout_below="@+id/textView69"
+            android:layout_marginTop="12dp"
+            android:text="Subject 1:" />
+
+        <EditText
+            android:id="@+id/national_test_subject_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView70"
+            android:layout_alignStart="@+id/textView70"
+            android:layout_below="@+id/textView70"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView72"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_subject_1"
+            android:layout_alignStart="@+id/national_test_subject_1"
+            android:layout_below="@+id/national_test_subject_1"
+            android:layout_marginTop="8dp"
+            android:text="Test score 1:" />
+
+        <EditText
+            android:id="@+id/national_test_score_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView72"
+            android:layout_alignStart="@+id/textView72"
+            android:layout_below="@+id/textView72"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView73"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_score_1"
+            android:layout_alignStart="@+id/national_test_score_1"
+            android:layout_below="@+id/national_test_score_1"
+            android:layout_marginTop="8dp"
+            android:text="Test date 1:" />
+
+        <EditText
+            android:id="@+id/national_test_date_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView73"
+            android:layout_alignStart="@+id/textView73"
+            android:layout_below="@+id/textView73"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView74"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView69"
+            android:layout_alignRight="@+id/textView69"
+            android:layout_below="@+id/national_test_date_1"
+            android:layout_marginTop="12dp"
+            android:text="Subject 2:" />
+
+        <EditText
+            android:id="@+id/national_test_subject_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView74"
+            android:layout_alignStart="@+id/textView74"
+            android:layout_below="@+id/textView74"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_subject_2"
+            android:layout_alignStart="@+id/national_test_subject_2"
+            android:layout_below="@+id/national_test_subject_2"
+            android:layout_marginTop="8dp"
+            android:text="Test score 2:" />
+
+        <EditText
+            android:id="@+id/national_test_score_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView75"
+            android:layout_alignStart="@+id/textView75"
+            android:layout_below="@+id/textView75"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView76"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_score_2"
+            android:layout_alignStart="@+id/national_test_score_2"
+            android:layout_below="@+id/national_test_score_2"
+            android:layout_marginTop="8dp"
+            android:text="Test date 2:" />
+
+        <EditText
+            android:id="@+id/national_test_date_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView76"
+            android:layout_alignStart="@+id/textView76"
+            android:layout_below="@+id/textView76"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+        android:id="@+id/textView77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView69"
+        android:layout_alignRight="@+id/textView69"
+        android:layout_below="@+id/national_test_date_2"
+        android:layout_marginTop="12dp"
+        android:text="Subject 3:" />
+
+        <EditText
+            android:id="@+id/national_test_subject_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView77"
+            android:layout_alignStart="@+id/textView77"
+            android:layout_below="@+id/textView77"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView78"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_subject_3"
+            android:layout_alignStart="@+id/national_test_subject_3"
+            android:layout_below="@+id/national_test_subject_3"
+            android:layout_marginTop="8dp"
+            android:text="Test score 3:" />
+
+        <EditText
+            android:id="@+id/national_test_score_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView78"
+            android:layout_alignStart="@+id/textView78"
+            android:layout_below="@+id/textView78"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_score_3"
+            android:layout_alignStart="@+id/national_test_score_3"
+            android:layout_below="@+id/national_test_score_3"
+            android:layout_marginTop="8dp"
+            android:text="Test date 3:" />
+
+        <EditText
+            android:id="@+id/national_test_date_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView79"
+            android:layout_alignStart="@+id/textView79"
+            android:layout_below="@+id/textView79"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView69"
+            android:layout_alignRight="@+id/textView69"
+            android:layout_below="@+id/national_test_date_3"
+            android:layout_marginTop="12dp"
+            android:text="Subject 4:" />
+
+        <EditText
+            android:id="@+id/national_test_subject_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView80"
+            android:layout_alignStart="@+id/textView80"
+            android:layout_below="@+id/textView80"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView81"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_subject_4"
+            android:layout_alignStart="@+id/national_test_subject_4"
+            android:layout_below="@+id/national_test_subject_4"
+            android:layout_marginTop="8dp"
+            android:text="Test score 4:" />
+
+        <EditText
+            android:id="@+id/national_test_score_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView81"
+            android:layout_alignStart="@+id/textView81"
+            android:layout_below="@+id/textView81"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView82"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_score_4"
+            android:layout_alignStart="@+id/national_test_score_4"
+            android:layout_below="@+id/national_test_score_4"
+            android:layout_marginTop="8dp"
+            android:text="Test date 4:" />
+
+        <EditText
+            android:id="@+id/national_test_date_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView82"
+            android:layout_alignStart="@+id/textView82"
+            android:layout_below="@+id/textView82"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView83"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView69"
+            android:layout_alignRight="@+id/textView69"
+            android:layout_below="@+id/national_test_date_4"
+            android:layout_marginTop="12dp"
+            android:text="Subject 5:" />
+
+        <EditText
+            android:id="@+id/national_test_subject_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView83"
+            android:layout_alignStart="@+id/textView83"
+            android:layout_below="@+id/textView83"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView84"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_subject_5"
+            android:layout_alignStart="@+id/national_test_subject_5"
+            android:layout_below="@+id/national_test_subject_5"
+            android:layout_marginTop="8dp"
+            android:text="Test score 5:" />
+
+        <EditText
+            android:id="@+id/national_test_score_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView84"
+            android:layout_alignStart="@+id/textView84"
+            android:layout_below="@+id/textView84"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView85"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_score_5"
+            android:layout_alignStart="@+id/national_test_score_5"
+            android:layout_below="@+id/national_test_score_5"
+            android:layout_marginTop="8dp"
+            android:text="Test date 5:" />
+
+        <EditText
+            android:id="@+id/national_test_date_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView85"
+            android:layout_alignStart="@+id/textView85"
+            android:layout_below="@+id/textView85"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView86"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView69"
+            android:layout_alignRight="@+id/textView69"
+            android:layout_below="@+id/national_test_date_5"
+            android:layout_marginTop="12dp"
+            android:text="Subject 6:" />
+
+        <EditText
+            android:id="@+id/national_test_subject_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView86"
+            android:layout_alignStart="@+id/textView86"
+            android:layout_below="@+id/textView86"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView87"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_subject_6"
+            android:layout_alignStart="@+id/national_test_subject_6"
+            android:layout_below="@+id/national_test_subject_6"
+            android:layout_marginTop="8dp"
+            android:text="Test score 6:" />
+
+        <EditText
+            android:id="@+id/national_test_score_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView87"
+            android:layout_alignStart="@+id/textView87"
+            android:layout_below="@+id/textView87"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView88"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/national_test_score_6"
+            android:layout_alignStart="@+id/national_test_score_6"
+            android:layout_below="@+id/national_test_score_6"
+            android:layout_marginTop="8dp"
+            android:text="Test date 6:" />
+
+        <EditText
+            android:id="@+id/national_test_date_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView88"
+            android:layout_alignStart="@+id/textView88"
+            android:layout_below="@+id/textView88"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <Button
+            android:id="@+id/national_test_next_button"
+            android:layout_below="@+id/national_test_date_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:background="#6B0F1B"
+            android:textColor="@android:color/white"/>
+
+
+    </RelativeLayout>
+</ScrollView>

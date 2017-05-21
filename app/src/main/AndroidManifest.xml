@@ -37,7 +37,9 @@
         <activity android:name=".ProDevThankyouActivity" />
         <activity android:name=".TranscriptActivity" />
         <activity android:name=".AdvancePlacementActivity" />
-        <activity android:name=".MilitaryServiceActivity"></activity>
+        <activity android:name=".MilitaryServiceActivity" />
+        <activity android:name=".StPetersburgAddressActivity" />
+        <activity android:name=".NationalAcceptanceTestActivity"></activity>
     </application>
 
 </manifest>
