@@ -87,8 +87,8 @@ public class NationalAcceptanceTestActivity extends AppCompatActivity implements
                 String score6Txt = editTextScore6.getText().toString();
                 String date6Txt = editTextDate6.getText().toString();
 
-                Intent main = new Intent(this, MainMenuActivity.class);
-                startActivity(main);
+                Intent universityEntranceExamsIntent = new Intent(this, UniversityEntranceExamsActivity.class);
+                startActivity(universityEntranceExamsIntent);
         }
     }
 }
