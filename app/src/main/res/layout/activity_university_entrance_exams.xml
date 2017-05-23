@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="ru.buepl.mobile.application.UniversityEntranceExamsActivity">
+
+        <TextView
+            android:id="@+id/textView89"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="Results of University Entrance Exams:" />
+
+        <TextView
+            android:id="@+id/textView90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView89"
+            android:layout_alignStart="@+id/textView89"
+            android:layout_below="@+id/textView89"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:text="Test date:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView90"
+            android:layout_alignStart="@+id/textView90"
+            android:layout_below="@+id/textView90"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView91"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_date"
+            android:layout_alignStart="@+id/university_entrance_exam_date"
+            android:layout_below="@+id/university_entrance_exam_date"
+            android:layout_marginTop="8dp"
+            android:text="Test location:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView91"
+            android:layout_alignStart="@+id/textView91"
+            android:layout_below="@+id/textView91"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_location"
+            android:layout_alignStart="@+id/university_entrance_exam_location"
+            android:layout_below="@+id/university_entrance_exam_location"
+            android:layout_marginTop="8dp"
+            android:text="Test results:" />
+
+        <TextView
+            android:id="@+id/textView93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView92"
+            android:layout_alignRight="@+id/textView92"
+            android:layout_below="@+id/textView92"
+            android:layout_marginTop="12dp"
+            android:text="Subject 1:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_subject_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView93"
+            android:layout_alignStart="@+id/textView93"
+            android:layout_below="@+id/textView93"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_subject_1"
+            android:layout_alignStart="@+id/university_entrance_exam_subject_1"
+            android:layout_below="@+id/university_entrance_exam_subject_1"
+            android:layout_marginTop="8dp"
+            android:text="Test score 1:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_score_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView94"
+            android:layout_alignStart="@+id/textView94"
+            android:layout_below="@+id/textView94"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView95"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_score_1"
+            android:layout_alignStart="@+id/university_entrance_exam_score_1"
+            android:layout_below="@+id/university_entrance_exam_score_1"
+            android:layout_marginTop="8dp"
+            android:text="Test date 1:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_date_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView95"
+            android:layout_alignStart="@+id/textView95"
+            android:layout_below="@+id/textView95"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView96"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView92"
+            android:layout_alignRight="@+id/textView92"
+            android:layout_below="@+id/university_entrance_exam_date_1"
+            android:layout_marginTop="12dp"
+            android:text="Subject 2:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_subject_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView96"
+            android:layout_alignStart="@+id/textView96"
+            android:layout_below="@+id/textView96"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView97"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_subject_2"
+            android:layout_alignStart="@+id/university_entrance_exam_subject_2"
+            android:layout_below="@+id/university_entrance_exam_subject_2"
+            android:layout_marginTop="8dp"
+            android:text="Test score 2:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_score_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView97"
+            android:layout_alignStart="@+id/textView97"
+            android:layout_below="@+id/textView97"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView98"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_score_2"
+            android:layout_alignStart="@+id/university_entrance_exam_score_2"
+            android:layout_below="@+id/university_entrance_exam_score_2"
+            android:layout_marginTop="8dp"
+            android:text="Test date 2:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_date_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView98"
+            android:layout_alignStart="@+id/textView98"
+            android:layout_below="@+id/textView98"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView99"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView92"
+            android:layout_alignRight="@+id/textView92"
+            android:layout_below="@+id/university_entrance_exam_date_2"
+            android:layout_marginTop="12dp"
+            android:text="Subject 3:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_subject_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView99"
+            android:layout_alignStart="@+id/textView99"
+            android:layout_below="@+id/textView99"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_subject_3"
+            android:layout_alignStart="@+id/university_entrance_exam_subject_3"
+            android:layout_below="@+id/university_entrance_exam_subject_3"
+            android:layout_marginTop="8dp"
+            android:text="Test score 3:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_score_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView100"
+            android:layout_alignStart="@+id/textView100"
+            android:layout_below="@+id/textView100"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView101"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_score_3"
+            android:layout_alignStart="@+id/university_entrance_exam_score_3"
+            android:layout_below="@+id/university_entrance_exam_score_3"
+            android:layout_marginTop="8dp"
+            android:text="Test date 3:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_date_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView101"
+            android:layout_alignStart="@+id/textView101"
+            android:layout_below="@+id/textView101"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView92"
+            android:layout_alignRight="@+id/textView92"
+            android:layout_below="@+id/university_entrance_exam_date_3"
+            android:layout_marginTop="12dp"
+            android:text="Subject 4:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_subject_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView102"
+            android:layout_alignStart="@+id/textView102"
+            android:layout_below="@+id/textView102"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView103"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_subject_4"
+            android:layout_alignStart="@+id/university_entrance_exam_subject_4"
+            android:layout_below="@+id/university_entrance_exam_subject_4"
+            android:layout_marginTop="8dp"
+            android:text="Test score 4:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_score_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView103"
+            android:layout_alignStart="@+id/textView103"
+            android:layout_below="@+id/textView103"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView104"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/university_entrance_exam_score_4"
+            android:layout_alignStart="@+id/university_entrance_exam_score_4"
+            android:layout_below="@+id/university_entrance_exam_score_4"
+            android:layout_marginTop="8dp"
+            android:text="Test date 4:" />
+
+        <EditText
+            android:id="@+id/university_entrance_exam_date_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView104"
+            android:layout_alignStart="@+id/textView104"
+            android:layout_below="@+id/textView104"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+
+        <Button
+            android:id="@+id/university_entrance_next_button"
+            android:layout_below="@+id/university_entrance_exam_date_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:textSize="20sp"
+            android:background="#6B0F1B"
+            android:textColor="@android:color/white"
+
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+</ScrollView>
