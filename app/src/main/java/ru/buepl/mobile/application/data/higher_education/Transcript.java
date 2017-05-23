@@ -21,6 +21,7 @@ import static ru.buepl.mobile.application.data.validation.Validation.*;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder(builderClassName = "Builder")
 public final class Transcript implements Validatable {
+    private Boolean hasTranscript;
     private TranscriptInfo info;
     private ScholasticCompetition scholasticCompetition;
 
