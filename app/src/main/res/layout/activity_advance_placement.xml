@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ru.buepl.mobile.application.AdvancePlacementActivity">
+
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="Documents for advance placement:" />
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView45"
+            android:layout_alignStart="@+id/textView45"
+            android:layout_below="@+id/textView45"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:text="Document title #1:" />
+
+        <EditText
+            android:id="@+id/advance_plc_doc_title_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView49"
+            android:layout_alignStart="@+id/textView49"
+            android:layout_below="@+id/textView49"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/advance_plc_doc_title_1"
+            android:layout_alignStart="@+id/advance_plc_doc_title_1"
+            android:layout_below="@+id/advance_plc_doc_title_1"
+            android:layout_marginTop="15dp"
+            android:text="Document No:" />
+
+        <EditText
+            android:id="@+id/advance_plc_doc_number_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView50"
+            android:layout_alignStart="@+id/textView50"
+            android:layout_below="@+id/textView50"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/advance_plc_doc_number_1"
+            android:layout_alignStart="@+id/advance_plc_doc_number_1"
+            android:layout_below="@+id/advance_plc_doc_number_1"
+            android:layout_marginTop="15dp"
+            android:text="Issued by:" />
+
+        <EditText
+            android:id="@+id/advance_plc_issued_by_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView51"
+            android:layout_alignStart="@+id/textView51"
+            android:layout_below="@+id/textView51"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/advance_plc_issued_by_1"
+            android:layout_alignStart="@+id/advance_plc_issued_by_1"
+            android:layout_below="@+id/advance_plc_issued_by_1"
+            android:layout_marginTop="15dp"
+            android:text="Issued date:" />
+
+        <EditText
+            android:id="@+id/advance_plc_issued_date_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text=""
+            android:layout_below="@+id/textView52"
+            android:layout_alignLeft="@+id/textView52"
+            android:layout_alignStart="@+id/textView52" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView45"
+            android:layout_alignStart="@+id/textView45"
+            android:layout_below="@+id/advance_plc_issued_date_1"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="30dp"
+            android:text="Document title #2:" />
+
+        <EditText
+            android:id="@+id/advance_plc_doc_title_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView53"
+            android:layout_alignStart="@+id/textView53"
+            android:layout_below="@+id/textView53"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/advance_plc_doc_title_2"
+            android:layout_alignStart="@+id/advance_plc_doc_title_2"
+            android:layout_below="@+id/advance_plc_doc_title_2"
+            android:layout_marginTop="15dp"
+            android:text="Document No:" />
+
+        <EditText
+            android:id="@+id/advance_plc_doc_number_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView54"
+            android:layout_alignStart="@+id/textView54"
+            android:layout_below="@+id/textView54"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/advance_plc_doc_number_2"
+            android:layout_alignStart="@+id/advance_plc_doc_number_2"
+            android:layout_below="@+id/advance_plc_doc_number_2"
+            android:layout_marginTop="15dp"
+            android:text="Issued by:" />
+
+        <EditText
+            android:id="@+id/advance_plc_issued_by_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView55"
+            android:layout_alignStart="@+id/textView55"
+            android:layout_below="@+id/textView55"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/advance_plc_issued_by_2"
+            android:layout_alignStart="@+id/advance_plc_issued_by_2"
+            android:layout_below="@+id/advance_plc_issued_by_2"
+            android:layout_marginTop="15dp"
+            android:text="Issued date:" />
+
+        <EditText
+            android:id="@+id/advance_plc_issued_date_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text=""
+            android:layout_below="@+id/textView56"
+            android:layout_alignLeft="@+id/textView56"
+            android:layout_alignStart="@+id/textView56" />
+
+        <Button
+            android:id="@+id/advance_plc_next_button"
+            android:layout_below="@+id/advance_plc_issued_date_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#6B0F1B"
+            android:textColor="@android:color/white"/>
+
+
+    </RelativeLayout>
+</ScrollView>

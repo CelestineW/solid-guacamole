@@ -1,6 +1,8 @@
 package ru.buepl.mobile.application;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +10,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class ProDevEducationActivity extends AppCompatActivity
         implements View.OnClickListener, AdapterView.OnItemSelectedListener{
@@ -21,6 +25,9 @@ public class ProDevEducationActivity extends AppCompatActivity
     EditText editTextQualification;
     EditText editTextSpecialization;
     EditText editTextForeignLanguage;
+
+    private ImageView imageview;
+    private TextView textview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +65,29 @@ public class ProDevEducationActivity extends AppCompatActivity
                 break;
 
             case R.id.pro_dev_photo_button:
-
+                /*   WORKS only turn on the camera
                 Intent proDevPhotoIntent = new Intent("android.media.action.IMAGE_CAPTURE");
                 startActivity(proDevPhotoIntent);
+                */
+                Intent proDevPhotoIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(proDevPhotoIntent, 1);
+
+
+                break;
+        }
+    }
+
+    // Testing new functionality
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case 0:
+                if (resultCode == RESULT_OK) {
+                    Uri selectedImage = data.getData();
+                    imageview.setImageURI(selectedImage);
+                }
                 break;
         }
     }

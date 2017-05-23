@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.buepl.mobile.application">
 
+    <!-- <uses-permission android:name="android.permission.CAMERA"/> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/baltic_logo"
@@ -34,6 +37,10 @@
         <activity android:name=".ProDevSubmitActivity" />
         <activity android:name=".ProDevThankyouActivity" />
         <activity android:name=".TranscriptActivity" />
+        <activity android:name=".AdvancePlacementActivity" />
+        <activity android:name=".MilitaryServiceActivity" />
+        <activity android:name=".StPetersburgAddressActivity" />
+        <activity android:name=".NationalAcceptanceTestActivity"></activity>
     </application>
 
 </manifest>

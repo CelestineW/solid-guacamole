@@ -60,12 +60,10 @@ public class AcademicInformationActivity extends AppCompatActivity implements Vi
 
             case R.id.academic_info_next:
 
-                Intent mainMenu = new Intent(this, MainMenuActivity.class);
-                startActivity(mainMenu);
+                Intent transcriptIntent = new Intent(this, TranscriptActivity.class);
+                startActivity(transcriptIntent);
 
                 break;
-
-
 
         }
 
