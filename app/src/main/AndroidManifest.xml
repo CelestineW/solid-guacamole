@@ -40,7 +40,9 @@
         <activity android:name=".MilitaryServiceActivity" />
         <activity android:name=".StPetersburgAddressActivity" />
         <activity android:name=".NationalAcceptanceTestActivity" />
-        <activity android:name=".UniversityEntranceExamsActivity"></activity>
+        <activity android:name=".UniversityEntranceExamsActivity" />
+        <activity android:name=".ParentsInformationActivity" />
+        <activity android:name=".SpecialRequirementActivity"></activity>
     </application>
 
 </manifest>

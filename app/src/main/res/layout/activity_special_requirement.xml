@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ru.buepl.mobile.application.SpecialRequirementActivity">
+
+
+        <TextView
+            android:id="@+id/textView71"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:text="Special requirements for testing:" />
+
+        <TextView
+            android:id="@+id/textView112"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView71"
+            android:layout_alignStart="@+id/textView71"
+            android:layout_below="@+id/textView71"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Test 1 title:" />
+
+        <EditText
+            android:id="@+id/special_requirement_test_1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView112"
+            android:layout_alignStart="@+id/textView112"
+            android:layout_below="@+id/textView112"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView113"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/special_requirement_test_1_title"
+            android:layout_alignStart="@+id/special_requirement_test_1_title"
+            android:layout_below="@+id/special_requirement_test_1_title"
+            android:layout_marginTop="8dp"
+            android:text="Special requirements:" />
+
+        <EditText
+            android:id="@+id/special_requirement_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView113"
+            android:layout_alignStart="@+id/textView113"
+            android:layout_below="@+id/textView113"
+            android:ems="10"
+            android:layout_marginTop="2dp"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView114"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/special_requirement_1"
+            android:layout_alignStart="@+id/special_requirement_1"
+            android:layout_below="@+id/special_requirement_1"
+            android:layout_marginTop="20dp"
+            android:text="Test 2 title:" />
+
+        <EditText
+            android:id="@+id/special_requirement_test_2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView114"
+            android:layout_alignStart="@+id/textView114"
+            android:layout_below="@+id/textView114"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView115"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/special_requirement_test_2_title"
+            android:layout_alignStart="@+id/special_requirement_test_2_title"
+            android:layout_below="@+id/special_requirement_test_2_title"
+            android:layout_marginTop="8dp"
+            android:text="Special requirements:" />
+
+        <EditText
+            android:id="@+id/special_requirement_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView115"
+            android:layout_alignStart="@+id/textView115"
+            android:layout_below="@+id/textView115"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView116"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/special_requirement_2"
+            android:layout_alignStart="@+id/special_requirement_2"
+            android:layout_below="@+id/special_requirement_2"
+            android:layout_marginTop="20dp"
+            android:text="Test 3 title:" />
+
+        <EditText
+            android:id="@+id/special_requirement_test_3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView116"
+            android:layout_alignStart="@+id/textView116"
+            android:layout_below="@+id/textView116"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView117"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/special_requirement_test_3_title"
+            android:layout_alignStart="@+id/special_requirement_test_3_title"
+            android:layout_below="@+id/special_requirement_test_3_title"
+            android:layout_marginTop="8dp"
+            android:text="Special requirement:" />
+
+        <EditText
+            android:id="@+id/special_requirement_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView117"
+            android:layout_alignStart="@+id/textView117"
+            android:layout_below="@+id/textView117"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView118"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/special_requirement_3"
+            android:layout_alignStart="@+id/special_requirement_3"
+            android:layout_below="@+id/special_requirement_3"
+            android:layout_marginTop="20dp"
+            android:text="Test 4 title:" />
+
+        <EditText
+            android:id="@+id/special_requirement_test_4_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView118"
+            android:layout_alignStart="@+id/textView118"
+            android:layout_below="@+id/textView118"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView119"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/special_requirement_test_4_title"
+            android:layout_alignStart="@+id/special_requirement_test_4_title"
+            android:layout_below="@+id/special_requirement_test_4_title"
+            android:layout_marginTop="8dp"
+            android:text="Special requirements:" />
+
+        <EditText
+            android:id="@+id/special_requirement_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView119"
+            android:layout_alignStart="@+id/textView119"
+            android:layout_below="@+id/textView119"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <Button
+            android:id="@+id/special_requirement_next_button"
+            android:layout_below="@+id/special_requirement_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:textSize="20sp"
+            android:background="#6B0F1B"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</ScrollView>

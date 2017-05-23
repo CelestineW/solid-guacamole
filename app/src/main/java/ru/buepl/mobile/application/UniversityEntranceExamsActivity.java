@@ -69,8 +69,8 @@ public class UniversityEntranceExamsActivity extends AppCompatActivity implement
                 String examScore4Txt = editTextExamScore4.getText().toString();
                 String examDate4Txt = editTextExamDate4.getText().toString();
 
-                Intent main = new Intent(this, MainMenuActivity.class);
-                startActivity(main);
+                Intent parentsInformationIntent = new Intent(this, ParentsInformationActivity.class);
+                startActivity(parentsInformationIntent);
 
                 break;
         }
