@@ -42,7 +42,16 @@
         <activity android:name=".NationalAcceptanceTestActivity" />
         <activity android:name=".UniversityEntranceExamsActivity" />
         <activity android:name=".ParentsInformationActivity" />
-        <activity android:name=".SpecialRequirementActivity"></activity>
+        <activity android:name=".SpecialRequirementActivity" />
+        <activity android:name=".DormitoryActivity" />
+        <activity android:name=".ReturnAddressActivity" />
+        <activity android:name=".Certification1Activity" />
+        <activity android:name=".Certification2Activity" />
+        <activity android:name=".Certification3Activity" />
+        <activity android:name=".Certification4Activity" />
+        <activity android:name=".Certification5Activity" />
+        <activity android:name=".Certification6Activity" />
+        <activity android:name=".ApplicantSignatureActivity"></activity>
     </application>
 
 </manifest>

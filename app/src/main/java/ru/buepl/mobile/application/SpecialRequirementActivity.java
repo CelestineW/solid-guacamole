@@ -54,8 +54,8 @@ public class SpecialRequirementActivity extends AppCompatActivity implements Vie
                 String specialTestTitle4Txt = editTextSpecialTestTitle4.getText().toString();
                 String specialRequirement4Txt = editTextSpecialRequirement4.getText().toString();
 
-                Intent main = new Intent(this, MainMenuActivity.class);
-                startActivity(main);
+                Intent dormitoryIntent = new Intent(this, DormitoryActivity.class);
+                startActivity(dormitoryIntent);
                 break;
         }
     }
