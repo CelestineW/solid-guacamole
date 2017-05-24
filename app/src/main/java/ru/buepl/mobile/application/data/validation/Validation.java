@@ -119,9 +119,9 @@ public final class Validation {
 
         for (ValidationError error : validationErrors) {
             String message = resources.getString(R.string.incomplete_section)
-                    + resources.getString(sectionStringResourceId)
-                    + " " + separator + " "
-                    + error.getMessage();
+                    + " " + resources.getString(sectionStringResourceId)
+                    + " " + separator
+                    + " " + error.getMessage();
             res.add(new ValidationError(message));
         }
         return res;
@@ -263,13 +263,13 @@ public final class Validation {
 
     private static List<ValidationError> missingField(int stringResourceId, Context context) {
         Resources resources = context.getResources();
-        String message = resources.getString(R.string.missing_field) + resources.getString(stringResourceId);
+        String message = resources.getString(R.string.missing_field) + " " + resources.getString(stringResourceId);
         return Collections.singletonList(new ValidationError(message));
     }
 
     private static List<ValidationError> invalidField(int stringResourceId, Context context) {
         Resources resources = context.getResources();
-        String message = resources.getString(R.string.invalid_field) + resources.getString(stringResourceId);
+        String message = resources.getString(R.string.invalid_field) + " " + resources.getString(stringResourceId);
         return Collections.singletonList(new ValidationError(message));
     }
 }

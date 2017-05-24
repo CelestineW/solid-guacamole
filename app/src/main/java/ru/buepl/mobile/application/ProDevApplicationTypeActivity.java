@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -37,10 +38,15 @@ public class ProDevApplicationTypeActivity extends LoggedInActivity implements V
         final String[] appItems = new String[]{"Program 1", "Program 2", "Program 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, appItems);
         appDropdown.setAdapter(adapter);
-        appDropdown.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        appDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 proDevApplicationFor = appItems[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                proDevApplicationFor = "";
             }
         });
 
@@ -49,10 +55,15 @@ public class ProDevApplicationTypeActivity extends LoggedInActivity implements V
         String[] levelItems = new String[]{"Level A (Beginner)", "Level B (Intermediate)", "Level C (Advance)"};
         ArrayAdapter<String> levelAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, levelItems);
         levelDropdown.setAdapter(levelAdapter);
-        levelDropdown.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        levelDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 level = ApplicationType.Level.values()[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                level = null;
             }
         });
 
@@ -75,8 +86,10 @@ public class ProDevApplicationTypeActivity extends LoggedInActivity implements V
 
     @Override
     public void onClick(View v) {
+        Log.d("application type", "here: " + v.getId() + "; " + R.id.pro_dev_button);
         switch (v.getId()) {
             case R.id.pro_dev_button:
+                Log.d("application type", "there");
                 saveApplicationData(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -103,6 +116,6 @@ public class ProDevApplicationTypeActivity extends LoggedInActivity implements V
         Application application = FirebaseHelper.getInstance().getApplication();
         application.getProfessionalDevelopmentApplication()
                 .setApplicationType(applicationType);
-        return null;
+        return application;
     }
 }

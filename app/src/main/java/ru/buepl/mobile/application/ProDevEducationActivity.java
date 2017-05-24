@@ -63,10 +63,15 @@ public class ProDevEducationActivity extends LoggedInActivity implements View.On
         final String[] appItems = new String[]{"Education 1", "Education 2", "Education 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, appItems);
         appDropdown.setAdapter(adapter);
-        appDropdown.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        appDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 educationLevel = appItems[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                educationLevel = null;
             }
         });
 
@@ -159,6 +164,6 @@ public class ProDevEducationActivity extends LoggedInActivity implements View.On
         Application application = FirebaseHelper.getInstance().getApplication();
         application.getProfessionalDevelopmentApplication()
                 .setEducation(education);
-        return null;
+        return application;
     }
 }
