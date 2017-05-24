@@ -52,26 +52,36 @@ public class AcademicInformationActivity extends LoggedInActivity implements Vie
         nextButton.setOnClickListener(this);
 
         currentEducation = (Spinner) findViewById(R.id.current_edu_level);
-        final String[] educationLevels = new String[]{"High school diploma", "Associate 1", "Associate 2", "Associate 3", "Associate 4", "Associate 5", "BA/BS"};
+        final String[] educationLevels = new String[]{"", "High school diploma", "Associate 1", "Associate 2", "Associate 3", "Associate 4", "Associate 5", "BA/BS"};
 
         ArrayAdapter<String> educationDegrees = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, educationLevels);
         currentEducation.setAdapter(educationDegrees);
-        currentEducation.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        currentEducation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 eduLvl = educationLevels[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                eduLvl = "";
             }
         });
 
 
         supportingDocument = (Spinner) findViewById(R.id.edu_documentation);
-        final String[] documentTypes = new String[]{"HS diploma", "BA/BS", "MA/MS", "Other"};
+        final String[] documentTypes = new String[]{"", "HS diploma", "BA/BS", "MA/MS", "Other"};
         ArrayAdapter<String> documents = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, documentTypes);
         supportingDocument.setAdapter(documents);
-        supportingDocument.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        supportingDocument.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 docType = documentTypes[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                docType = "";
             }
         });
 

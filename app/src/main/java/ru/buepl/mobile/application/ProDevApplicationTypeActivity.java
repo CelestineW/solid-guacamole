@@ -35,7 +35,7 @@ public class ProDevApplicationTypeActivity extends LoggedInActivity implements V
 
         Spinner appDropdown = (Spinner) findViewById(R.id.application_spinner);
         appDropdown.setPrompt("Select One");
-        final String[] appItems = new String[]{"Program 1", "Program 2", "Program 3"};
+        final String[] appItems = new String[]{"", "Program 1", "Program 2", "Program 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, appItems);
         appDropdown.setAdapter(adapter);
         appDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -52,13 +52,15 @@ public class ProDevApplicationTypeActivity extends LoggedInActivity implements V
 
         Spinner levelDropdown = (Spinner) findViewById(R.id.level_spinner);
         levelDropdown.setPrompt("Select One");
-        String[] levelItems = new String[]{"Level A (Beginner)", "Level B (Intermediate)", "Level C (Advance)"};
+        String[] levelItems = new String[]{"", "Level A (Beginner)", "Level B (Intermediate)", "Level C (Advance)"};
         ArrayAdapter<String> levelAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, levelItems);
         levelDropdown.setAdapter(levelAdapter);
         levelDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                level = ApplicationType.Level.values()[position];
+                if (position > 0) {
+                    level = ApplicationType.Level.values()[position - 1];
+                }
             }
 
             @Override
@@ -75,7 +77,7 @@ public class ProDevApplicationTypeActivity extends LoggedInActivity implements V
         if (applicationType != null) {
             ApplicationType.Level level = applicationType.getLevel();
             if (level != null) {
-                levelDropdown.setSelection(level.ordinal());
+                levelDropdown.setSelection(level.ordinal() + 1);
             }
             int index = adapter.getPosition(applicationType.getCourse());
             if (index >= 0) {

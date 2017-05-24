@@ -37,28 +37,38 @@ public class HigherEdApplicationTypeActivity extends LoggedInActivity
 
         Spinner yearDropdown = (Spinner) findViewById(R.id.higher_ed_application_spinner);
         yearDropdown.setPrompt("Select One");
-        String[] appItems = new String[]{"Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"};
+        String[] appItems = new String[]{"", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, appItems);
         yearDropdown.setAdapter(adapter);
-        yearDropdown.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        yearDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                yearNumber = position + 1;
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                yearNumber = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                yearNumber = null;
             }
         });
 
 
-        final String[] choices = new String[]{"05.03.06 - Environmental Sciences", "37.03.01 - Psychology", "40.03.01 - Law", "54.03.01 - Design", "38.03.01 - Economics", "38.03.02 - Management", "52.05.01 - Performing Arts – Acting", "52.05.01 - Performing Arts – Musical Theater"};
+        final String[] choices = new String[]{"", "05.03.06 - Environmental Sciences", "37.03.01 - Psychology", "40.03.01 - Law", "54.03.01 - Design", "38.03.01 - Economics", "38.03.02 - Management", "52.05.01 - Performing Arts – Acting", "52.05.01 - Performing Arts – Musical Theater"};
 
 
         Spinner programDropdown_c1 = (Spinner) findViewById(R.id.higher_ed_choice1);
         //programDropdown_c1.setPrompt("Choice 1");
         ArrayAdapter<String> choice1Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, choices);
         programDropdown_c1.setAdapter(choice1Adapter);
-        programDropdown_c1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        programDropdown_c1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 choice1 = choices[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                choice1 = "";
             }
         });
 
@@ -66,10 +76,15 @@ public class HigherEdApplicationTypeActivity extends LoggedInActivity
         //programDropdown_c2.setPrompt("Choice 2");
         ArrayAdapter<String> choice2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, choices);
         programDropdown_c2.setAdapter(choice2Adapter);
-        programDropdown_c2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        programDropdown_c2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 choice2 = choices[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                choice2 = "";
             }
         });
 
@@ -77,10 +92,15 @@ public class HigherEdApplicationTypeActivity extends LoggedInActivity
         //programDropdown_c3.setPrompt("Choice 3");
         ArrayAdapter<String> choice3Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, choices);
         programDropdown_c3.setAdapter(choice3Adapter);
-        programDropdown_c3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        programDropdown_c3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 choice3 = choices[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                choice3 = "";
             }
         });
 
@@ -96,7 +116,7 @@ public class HigherEdApplicationTypeActivity extends LoggedInActivity
                 .getApplicationType();
         if (applicationType != null) {
             if (applicationType.getYearNumber() != null) {
-                yearDropdown.setSelection(applicationType.getYearNumber() - 1);
+                yearDropdown.setSelection(applicationType.getYearNumber());
             }
             if (applicationType.getCourseType() != null) {
                 switch (applicationType.getCourseType()) {

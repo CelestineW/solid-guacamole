@@ -60,7 +60,7 @@ public class ProDevEducationActivity extends LoggedInActivity implements View.On
 
         Spinner appDropdown = (Spinner) findViewById(R.id.pro_dev_edu_spinner);
         appDropdown.setPrompt("Select One");
-        final String[] appItems = new String[]{"Education 1", "Education 2", "Education 3"};
+        final String[] appItems = new String[]{"", "Education 1", "Education 2", "Education 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, appItems);
         appDropdown.setAdapter(adapter);
         appDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
