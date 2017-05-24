@@ -3,6 +3,7 @@ package ru.buepl.mobile.application.data.higher_education;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import java.util.Collections;
 import java.util.List;
 
 import lombok.AccessLevel;
@@ -10,11 +11,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.buepl.mobile.application.R;
 import ru.buepl.mobile.application.data.validation.Validatable;
 import ru.buepl.mobile.application.data.validation.ValidationError;
-
-import static ru.buepl.mobile.application.data.validation.Validation.*;
 
 @Data
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -29,7 +27,7 @@ public final class SpecialRequirements implements Validatable {
     @NonNull
     @Override
     public List<ValidationError> validate(@NonNull Context context) {
-        return aggregateErrors(
+/*        return aggregateErrors(
                 mapErrorsForSection(nullOrValid(requirement1, context),
                         R.string.special_requirements_for_test_1, context),
                 mapErrorsForSection(nullOrValid(requirement2, context),
@@ -38,6 +36,7 @@ public final class SpecialRequirements implements Validatable {
                         R.string.special_requirements_for_test_3, context),
                 mapErrorsForSection(nullOrValid(requirement4, context),
                         R.string.special_requirements_for_test_4, context)
-        );
+        );*/
+        return Collections.emptyList();
     }
 }

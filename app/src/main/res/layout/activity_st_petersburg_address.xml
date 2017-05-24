@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="ru.buepl.mobile.application.StPetersburgAddressActivity">
+
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="45dp"
+            android:textSize="20sp"
+            android:text="Address in St.Petersburg:" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView61"
+            android:layout_alignStart="@+id/textView61"
+            android:layout_below="@+id/textView61"
+            android:layout_marginLeft="54dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="15dp"
+            android:text="Street address:" />
+
+        <EditText
+            android:id="@+id/stPetersburg_street_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView62"
+            android:layout_alignStart="@+id/textView62"
+            android:layout_below="@+id/textView62"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/stPetersburg_street_address"
+            android:layout_alignStart="@+id/stPetersburg_street_address"
+            android:layout_below="@+id/stPetersburg_street_address"
+            android:layout_marginTop="15dp"
+            android:text="Apt. No:" />
+
+        <EditText
+            android:id="@+id/stPetersburg_Apt_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView63"
+            android:layout_alignStart="@+id/textView63"
+            android:layout_below="@+id/textView63"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/stPetersburg_Apt_no"
+            android:layout_alignStart="@+id/stPetersburg_Apt_no"
+            android:layout_below="@+id/stPetersburg_Apt_no"
+            android:layout_marginTop="15dp"
+            android:text="City:" />
+
+        <EditText
+            android:id="@+id/stPetersburg_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView64"
+            android:layout_alignStart="@+id/textView64"
+            android:layout_below="@+id/textView64"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView65"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/stPetersburg_city"
+            android:layout_alignStart="@+id/stPetersburg_city"
+            android:layout_below="@+id/stPetersburg_city"
+            android:layout_marginTop="15dp"
+            android:text="Zip code:" />
+
+        <EditText
+            android:id="@+id/stPetersburg_zip_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView65"
+            android:layout_alignStart="@+id/textView65"
+            android:layout_below="@+id/textView65"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <Button
+            android:id="@+id/stPetersburg_next_button"
+            android:layout_below="@+id/stPetersburg_zip_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:background="#6B0F1B"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ru.buepl.mobile.application.MilitaryServiceActivity">
+
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="45dp"
+            android:textSize="18sp"
+            android:text="Military service eligibility" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView57"
+            android:layout_marginLeft="80dp"
+            android:id="@+id/military_sev_radio_group">
+
+            <RadioButton
+                android:id="@+id/military_serv_radio_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/military_sev_radio_group"
+                android:layout_marginTop="15dp"
+                android:text="Yes"/>
+
+            <RadioButton
+                android:id="@+id/military_serv_radio_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/military_sev_radio_group"
+                android:layout_marginTop="5dp"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/military_sev_radio_group"
+            android:layout_alignStart="@+id/military_sev_radio_group"
+            android:layout_below="@+id/military_sev_radio_group"
+            android:layout_marginTop="15dp"
+            android:text="Document No:" />
+
+        <EditText
+            android:id="@+id/military_serv_doc_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView58"
+            android:layout_alignStart="@+id/textView58"
+            android:layout_below="@+id/textView58"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/military_serv_doc_no"
+            android:layout_alignStart="@+id/military_serv_doc_no"
+            android:layout_below="@+id/military_serv_doc_no"
+            android:layout_marginTop="15dp"
+            android:text="Issue date:" />
+
+        <EditText
+            android:id="@+id/military_serv_issue_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView59"
+            android:layout_alignStart="@+id/textView59"
+            android:layout_below="@+id/textView59"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/military_serv_issue_date"
+            android:layout_alignStart="@+id/military_serv_issue_date"
+            android:layout_below="@+id/military_serv_issue_date"
+            android:layout_marginTop="15dp"
+            android:text="Issue from" />
+
+        <EditText
+            android:id="@+id/military_serv_issue_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView60"
+            android:layout_alignStart="@+id/textView60"
+            android:layout_below="@+id/textView60"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <Button
+            android:id="@+id/miliatry_serv_next_button"
+            android:layout_below="@+id/military_serv_issue_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+
+            android:layout_centerHorizontal="true"
+            android:background="#6B0F1B"
+            android:textColor="@android:color/white"/>
+
+
+    </RelativeLayout>
+</ScrollView>

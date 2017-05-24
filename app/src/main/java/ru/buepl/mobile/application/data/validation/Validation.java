@@ -1,9 +1,11 @@
 package ru.buepl.mobile.application.data.validation;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Pair;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,7 +21,31 @@ import ru.buepl.mobile.application.R;
  * @see Validatable
  */
 public final class Validation {
-    private Validation() {}
+    private Validation() {
+    }
+
+    public static List<Pair<Class<? extends Activity>, List<ValidationError>>>
+    validateForActivity(Context context,
+                        Class<? extends Activity> activity,
+                        Validatable validatable) {
+        List<ValidationError> errors = validatable.validate(context);
+        if (!errors.isEmpty()) {
+            Pair<Class<? extends Activity>, List<ValidationError>> pair = Pair.<Class<? extends Activity>, List<ValidationError>>create(activity, errors);
+            return Collections.singletonList(pair);
+        } else {
+            return Collections.emptyList();
+        }
+    }
+
+    @SafeVarargs
+    public static List<Pair<Class<? extends Activity>, List<ValidationError>>>
+    aggregateActivityValidations(List<Pair<Class<? extends Activity>, List<ValidationError>>>... activityValidations) {
+        List<Pair<Class<? extends Activity>, List<ValidationError>>> res = new ArrayList<>();
+        for (List<Pair<Class<? extends Activity>, List<ValidationError>>> validation : activityValidations) {
+            res.addAll(validation);
+        }
+        return res;
+    }
 
     /**
      * Validates an object, and toasts the first error if any were encountered.
@@ -91,11 +117,11 @@ public final class Validation {
         Resources resources = context.getResources();
         String separator = resources.getString(R.string.validation_separator);
 
-        for (ValidationError error: validationErrors) {
+        for (ValidationError error : validationErrors) {
             String message = resources.getString(R.string.incomplete_section)
-                    + resources.getString(sectionStringResourceId)
-                    + " " + separator + " "
-                    + error.getMessage();
+                    + " " + resources.getString(sectionStringResourceId)
+                    + " " + separator
+                    + " " + error.getMessage();
             res.add(new ValidationError(message));
         }
         return res;
@@ -105,7 +131,7 @@ public final class Validation {
      * Validates the specified {@link Validatable} objects, and
      * returns a list containing all {@link ValidationError errors}
      * encountered during validation.
-     *
+     * <p>
      * <p>Note: The original sources of the {@link ValidationError}s will
      * not be recorded.
      *
@@ -117,7 +143,7 @@ public final class Validation {
     public static List<ValidationError> validateAll(@NonNull Context context,
                                                     @NonNull Validatable... toValidate) {
         List<ValidationError> res = new ArrayList<>();
-        for (Validatable v: toValidate) {
+        for (Validatable v : toValidate) {
             res.addAll(v.validate(context));
         }
         return res;
@@ -126,7 +152,7 @@ public final class Validation {
     /**
      * Validates that an object is not {@code null}.
      *
-     * @param obj                the object to validate
+     * @param obj              the object to validate
      * @param stringResourceId the ID of {@link R.string string resource} naming the field
      *                         which is being validated
      * @param context          the {@link Context} with which to perform the validation
@@ -185,7 +211,7 @@ public final class Validation {
 
     /**
      * Validates that a string is not {@code null} or empty, and matches a specified pattern.
-
+     *
      * @param toValidate       the string to validate.
      * @param pattern          the {@link Pattern} the string should match
      * @param stringResourceId the ID of {@link R.string string resource} naming the field
@@ -210,7 +236,7 @@ public final class Validation {
 
     /**
      * Validates that a string is {@code null}, empty, or matches a specified pattern.
-
+     *
      * @param toValidate       the string to validate.
      * @param pattern          the {@link Pattern} the string should match
      * @param stringResourceId the ID of {@link R.string string resource} naming the field
@@ -237,13 +263,13 @@ public final class Validation {
 
     private static List<ValidationError> missingField(int stringResourceId, Context context) {
         Resources resources = context.getResources();
-        String message = resources.getString(R.string.missing_field) + resources.getString(stringResourceId);
+        String message = resources.getString(R.string.missing_field) + " " + resources.getString(stringResourceId);
         return Collections.singletonList(new ValidationError(message));
     }
 
     private static List<ValidationError> invalidField(int stringResourceId, Context context) {
         Resources resources = context.getResources();
-        String message = resources.getString(R.string.invalid_field) + resources.getString(stringResourceId);
+        String message = resources.getString(R.string.invalid_field) + " " + resources.getString(stringResourceId);
         return Collections.singletonList(new ValidationError(message));
     }
 }

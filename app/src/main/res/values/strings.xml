@@ -21,6 +21,7 @@
     <string name="diploma_number">Diploma Number</string>
     <string name="document_number">Document Number</string>
     <string name="document_title">Document Title</string>
+    <string name="dormitory">Dormitory</string>
     <string name="education_level">Education Level</string>
     <string name="email">Email</string>
     <string name="exam_result">Exam Result</string>
@@ -72,6 +73,7 @@
     <string name="test_result_4">Test Result 4</string>
     <string name="test_title">Test Title</string>
     <string name="transcript_info">Transcript Information</string>
+    <string name="transcript_yes_no">Transcript yes/no</string>
     <string name="year_number">Year Number</string>
     <string name="zip_code">Zip Code</string>
 
