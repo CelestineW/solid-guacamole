@@ -83,7 +83,7 @@ public class SpecialRequirementActivity extends LoggedInActivity implements View
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Intent intent = new Intent(SpecialRequirementActivity.this, MainMenuActivity.class); // TODO: 5/23/17 change activity
+                            Intent intent = new Intent(SpecialRequirementActivity.this, DormitoryActivity.class);
                             startActivity(intent);
                         } else {
                             Toaster.toastException(SpecialRequirementActivity.this, task.getException());
