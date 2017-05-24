@@ -120,6 +120,10 @@ public class TranscriptActivity extends LoggedInActivity implements View.OnClick
                 .competitionTitle(editTextCompetitionTitle.getText().toString().trim())
                 .diplomaNumber(editTextDiplomaNo.getText().toString().trim())
                 .build();
+        if (scholasticCompetition.getCompetitionTitle().isEmpty()
+                && scholasticCompetition.getDiplomaNumber().isEmpty()) {
+            scholasticCompetition = null;
+        }
 
         Transcript transcript = Transcript.builder()
                 .hasTranscript(hasTranscript)

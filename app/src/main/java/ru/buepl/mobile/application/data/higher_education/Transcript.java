@@ -28,10 +28,18 @@ public final class Transcript implements Validatable {
     @NonNull
     @Override
     public List<ValidationError> validate(@NonNull Context context) {
-        return aggregateErrors(
-                mapErrorsForSection(info, R.string.transcript_info, context),
-                mapErrorsForSection(nullOrValid(scholasticCompetition, context),
-                        R.string.scholastic_competition, context)
-        );
+        if (hasTranscript != null && hasTranscript) {
+            return aggregateErrors(
+                    mapErrorsForSection(info, R.string.transcript_info, context),
+                    mapErrorsForSection(nullOrValid(scholasticCompetition, context),
+                            R.string.scholastic_competition, context)
+            );
+        } else {
+            return aggregateErrors(
+                    mapErrorsForSection(nonNull(hasTranscript, R.string.transcript_yes_no, context), R.string.transcript_info, context),
+                    mapErrorsForSection(nullOrValid(scholasticCompetition, context),
+                            R.string.scholastic_competition, context)
+            );
+        }
     }
 }

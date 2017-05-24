@@ -105,6 +105,10 @@ public class AcademicInformationActivity extends LoggedInActivity implements Vie
             if (index >= 0) {
                 currentEducation.setSelection(index);
             }
+            index = documents.getPosition(academicInfo.getSupportingDocumentationType());
+            if (index >= 0) {
+                supportingDocument.setSelection(index);
+            }
         }
     }
 
